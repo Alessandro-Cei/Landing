@@ -1,0 +1,43 @@
+    @font-face {
+        font-family: "Kit Rounded";
+        src: url('../../assets/Kit-Rounded_Semibold.otf');
+    }
+    @font-face {
+        font-family: "Auger Mono";
+        src: url('../../assets/Auger Mono Regular.otf');
+    }
+    #logoContainer {
+        display: flex;
+        height: 50%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    #logo {
+        width: 25%;
+    }
+    #title {
+        margin-left: 2%;
+    }
+    #title > h1{
+        /*font-size: 250%;*/
+        font-family: "Kit Rounded";
+    }
+    #title > h3{
+        /*font-size: 120%;*/
+        font-family: "Auger Mono";
+    }
+    #title * {
+        color: #E2E2E2;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    @media(max-width:992px){
+        #logo {
+            width: 20%;
+        }
+    }

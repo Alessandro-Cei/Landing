@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Rubrik-Bold";
+    src: url('../../assets/Rubrik-Bold.otf');
+}
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    background-color: #17171B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.navbar-logo {
+   width: 25vh;
+}
+  
+.navbar-links > a {
+    text-decoration: none;
+    font-family: "Rubrik-Bold";
+    color: white;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      color: #555;
+    }
+}
+
+@media(max-width:992px){
+    .navbar {
+        display: none;
+    }
+}

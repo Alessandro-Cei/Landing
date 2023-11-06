@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Auger Mono";
+    src: url('../../assets/Auger Mono Regular.otf');
+}
+
+#container {
+    padding: 0;
+    margin: auto auto auto auto;
+    line-height: 30px;
+    width: 70%;
+    height: 40%;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+}
+
+#static {
+    font-family: "Auger Mono";
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+#dynamic {
+    font-family: "Auger Mono";
+    font-size: 30px;
+    color: #6CE0FF;
+}
+
+.typed-cursor {
+    font-size: 30px;
+}
+
+@media(max-width:992px){
+    #container {
+        line-height: 15px;
+        width: 50%;
+        margin-left: 10%;
+    }
+    #static {
+        font-size: 17px;
+    }
+    #dynamic {
+        font-size: 17px;
+    }
+    .typed-cursor {
+        font-size: 17px;
+    }
+}
