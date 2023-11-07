@@ -6,34 +6,34 @@
     font-family: "Auger Mono Regular";
     src: url('../../assets/Auger Mono Regular.otf');
 }
-.sauce__container {
+.subhero__container {
     margin: 5vh auto;
     display: flex;
     align-items: center;
 }
-.sauce__picture {
+.subhero__picture {
     width: 50%;
     object-fit: contain;
 }
-.sauce__description {
+.subhero__description {
     width: 50%;
     text-align: left;
     padding: 0 5%;
 }
-.sauce__description > h2 {
+.subhero__description > h2 {
     font-family: "Rubrik-Bold";
 }
-.sauce__description > h3 {
+.subhero__description > h3 {
     font-family: "Auger Mono Regular";
 }
 @media(max-width:576px){
-    .sauce__container {
+    .subhero__container {
         flex-direction: column;
     }
-    .sauce__picture {
+    .subhero__picture {
         width: 100%;
     }
-    .sauce__description {
+    .subhero__description {
         width: 80%;
     }
 }
