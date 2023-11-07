@@ -1,6 +1,7 @@
 import './App.css'
 import NavBar from './NavBar/NavBar'
 import Hero from '../sections/Hero/Hero'
+import Sauce from '../sections/Sauce/Sauce'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div id="site__container">
     	<Hero/>
       <NavBar/>
+      <Sauce/>
     </div>
   )
   

@@ -2,6 +2,7 @@
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
+  background-color: #1F1F23;
 }
 #site__container {
   display: flex;

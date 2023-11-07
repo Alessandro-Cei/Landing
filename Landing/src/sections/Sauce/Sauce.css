@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Rubrik-Bold";
+    src: url('../../assets/Rubrik-Bold.otf');
+}
+@font-face {
+    font-family: "Auger Mono Regular";
+    src: url('../../assets/Auger Mono Regular.otf');
+}
+.sauce__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.sauce__picture {
+    width: 50%;
+    object-fit: contain;
+}
+.sauce__description {
+    width: 50%;
+    text-align: left;
+    padding: 0 5%;
+}
+.sauce__description > h2 {
+    font-family: "Rubrik-Bold";
+}
+.sauce__description > h3 {
+    font-family: "Auger Mono Regular";
+}
