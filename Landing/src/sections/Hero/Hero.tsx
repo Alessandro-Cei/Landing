@@ -7,7 +7,7 @@ export default function Hero() {
     return(
         <div className="hero__container">
             <div className="hero__left-side">
-                <Logo size={250} opacity="60%"/>
+                <Logo size={3} opacity="60%"/>
                 <OneLiner/>
             </div>
             <img className="hero__right-side" src={hero} alt="Developer's picture"/>

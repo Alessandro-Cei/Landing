@@ -13,11 +13,11 @@ export default function Logo(props: LogoProps) {
             <img className="logo__icon" src={logo} alt="The logo's icon"/>
             <div className="logo__logotype">
                 <h1 style={{
-                    fontSize: props.size + "%",
+                    fontSize: props.size + "vw",
                     opacity: props.opacity
                 }}>Alessandro Cei</h1>
                 <h3 style={{
-                    fontSize: (props.size / 2) + "%",
+                    fontSize: (props.size / 2) + "vw",
                     opacity: props.opacity
                 }}>iOS Developer</h3>
             </div>

@@ -22,11 +22,9 @@
         margin-left: 2%;
     }
     .logo__logotype > h1{
-        /*font-size: 250%;*/
         font-family: "Kit Rounded";
     }
     .logo__logotype > h3{
-        /*font-size: 120%;*/
         font-family: "Auger Mono";
     }
     .logo__logotype * {
@@ -36,8 +34,14 @@
         text-align: left;
     }
 
-    @media(max-width:992px){
+    @media(max-width:576px){
         .logo__icon {
             width: 20%;
+        }
+        .logo__logotype > h1{
+            font-size: 7vw !important;
+        }
+        .logo__logotype > h3{
+            font-size: 3vw !important;
         }
     }
