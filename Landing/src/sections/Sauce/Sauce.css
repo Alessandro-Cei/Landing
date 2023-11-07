@@ -7,8 +7,7 @@
     src: url('../../assets/Auger Mono Regular.otf');
 }
 .sauce__container {
-    width: 100vw;
-    height: 100vh;
+    margin: 5vh auto;
     display: flex;
     align-items: center;
 }
@@ -26,4 +25,15 @@
 }
 .sauce__description > h3 {
     font-family: "Auger Mono Regular";
+}
+@media(max-width:576px){
+    .sauce__container {
+        flex-direction: column;
+    }
+    .sauce__picture {
+        width: 100%;
+    }
+    .sauce__description {
+        width: 80%;
+    }
 }

@@ -10,17 +10,28 @@ const pictures:string[] = [picture1, picture2, picture3, picture4, picture5];
 
 export default function Sauce() {
 
-    const [index, setIndex] = useState(0);
+    const [pictureIndex, setPictureIndex] = useState(0);
+    const [pictureOpacity, setPictureOpacity] = useState(1);
+
     useEffect(() => {
-        const interval = setInterval(() => {
-          setIndex((prevIndex) => (prevIndex + 1) % pictures.length);
-        }, 3000); 
-        return () => clearInterval(interval);
-    }, []);
+      const timeout = setTimeout(() => {
+        setPictureOpacity(0);
+        setTimeout(() => {
+            setPictureIndex((prevIndex) => (prevIndex + 1) % pictures.length);
+            setPictureOpacity(1);
+        }, 250); 
+      }, 4000);
+      return () => clearTimeout(timeout);
+    }, [pictureIndex, pictures]);
 
     return(
         <div className="sauce__container">
-            <img className="sauce__picture" src={pictures[index]} alt=""/>
+            <img src={pictures[pictureIndex]} alt="Picture of the Developer in action" className="sauce__picture"
+                style={{
+                    opacity: pictureOpacity,
+                    transition: 'opacity 0.25s ease-in-out'
+                }}
+            />
             <div className="sauce__description">
                 <h2>iOS Development at its human finest</h2>
                 <h3>iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest</h3>
