@@ -6,7 +6,7 @@
         font-family: "Auger Mono";
         src: url('../../assets/Auger Mono Regular.otf');
     }
-    #logoContainer {
+    .logo__container {
         display: flex;
         height: 50%;
         width: 100%;
@@ -15,21 +15,21 @@
         align-items: center;
         justify-content: center;
     }
-    #logo {
+    .logo__icon {
         width: 25%;
     }
-    #title {
+    .logo__logotype {
         margin-left: 2%;
     }
-    #title > h1{
+    .logo__logotype > h1{
         /*font-size: 250%;*/
         font-family: "Kit Rounded";
     }
-    #title > h3{
+    .logo__logotype > h3{
         /*font-size: 120%;*/
         font-family: "Auger Mono";
     }
-    #title * {
+    .logo__logotype * {
         color: #E2E2E2;
         margin: 0;
         padding: 0;
@@ -37,7 +37,7 @@
     }
 
     @media(max-width:992px){
-        #logo {
+        .logo__icon {
             width: 20%;
         }
     }

@@ -12,11 +12,11 @@
     align-items: center;
 }
   
-.navbar-logo {
+.navbar__logo {
    width: 25vh;
 }
   
-.navbar-links > a {
+.navbar__links > a {
     text-decoration: none;
     font-family: "Rubrik-Bold";
     color: white;
