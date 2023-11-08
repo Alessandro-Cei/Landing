@@ -1,0 +1,65 @@
+.pills-row__container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pill {
+  display: inline-flex;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 16px;
+  transition: 0.5s;
+  font-family: "Inter";
+  font-weight: bold;
+}
+.pills-row__scroll {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+}
+.pills-row__scroll div {
+  white-space: nowrap;
+  animation: var(--a) var(--t) linear infinite;
+  animation-delay: calc(var(--t) * -1);
+}
+.pills-row__scroll div:nth-child(2) {
+  animation: var(--a2) var(--t) linear infinite;
+  animation-delay: calc(var(--t) / -2);
+}
+@keyframes animationRight {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+@keyframes animationRight2 {
+  0%{
+    transform: translateX(-200%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes animationLeft {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@keyframes animationLeft2 {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+}

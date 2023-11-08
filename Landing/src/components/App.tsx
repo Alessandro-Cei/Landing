@@ -2,6 +2,7 @@ import './App.css'
 import NavBar from './NavBar/NavBar'
 import Hero from '../sections/Hero/Hero'
 import SubHero from '../sections/SubHero/SubHero'
+import PillsGrid from './PillsGrid/PillsGrid'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     	<Hero/>
       <NavBar/>
       <SubHero/>
+      <PillsGrid/>
     </div>
   )
   

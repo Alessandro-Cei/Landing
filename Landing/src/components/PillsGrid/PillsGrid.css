@@ -1,0 +1,12 @@
+.pills__container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 10vh auto;
+}
+
+  
+  
+  
+  
