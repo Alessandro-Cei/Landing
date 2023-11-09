@@ -1,0 +1,15 @@
+.section-title__container {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.section-title__container *{
+    margin: 0;
+    text-align: left;
+}
+.section-title__container > h1 {
+    font-family: "Rubrik-Bold";
+}
+.section-title__container > h3 {
+    font-family: "Auger Mono";
+}

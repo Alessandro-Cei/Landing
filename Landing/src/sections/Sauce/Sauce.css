@@ -1,0 +1,24 @@
+.sauce__container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10% 44% 44%;
+    gap: 1%;
+    width: 90vw;
+    height: 100vh;
+}
+.sauce__symbol {
+   width: 100%;
+}
+.sauce__text {
+    font-family: Inter;
+    font-weight: normal;
+    text-align: left;
+    width: 90%;
+    margin-top: 8vh;
+}
+.sauce__image > img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
