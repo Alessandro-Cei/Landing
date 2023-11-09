@@ -8,7 +8,9 @@ function App() {
 
   return (
     <div id="site__container">
-    	<Hero/>
+      <section id='hero__section'>
+        <Hero/>
+      </section>
       <NavBar/>
       <SubHero/>
       <PillsGrid/>

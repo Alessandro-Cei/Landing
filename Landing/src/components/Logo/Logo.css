@@ -1,11 +1,3 @@
-    @font-face {
-        font-family: "Kit Rounded";
-        src: url('../../assets/Kit-Rounded_Semibold.otf');
-    }
-    @font-face {
-        font-family: "Auger Mono";
-        src: url('../../assets/Auger Mono Regular.otf');
-    }
     .logo__container {
         display: flex;
         height: 50%;

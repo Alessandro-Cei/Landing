@@ -1,6 +1,8 @@
 import './NavBar.css'
 import Logo from '../Logo/Logo'
 import { useState } from 'react';
+import { Link } from 'react-scroll';
+
 
 export default function NavBar() {
 
@@ -22,10 +24,10 @@ export default function NavBar() {
           <Logo size={1.1} opacity="100%"/>
         </div>
         <div className="navbar__links">
-          <a href="#">My sauce</a>
-          <a href="#">Experiences</a>
-          <a href="#">Projects</a>
-          <a href="#">Contacts</a>
+        <Link to="hero__section" smooth={true} duration={500}>My sauce</Link>
+        <Link to="hero__section" smooth={true} duration={500}>Experiences</Link>
+        <Link to="hero__section" smooth={true} duration={500}>Projects</Link>
+        <Link to="hero__section" smooth={true} duration={500}>Contacts</Link>
         </div>
       </nav>
     </>

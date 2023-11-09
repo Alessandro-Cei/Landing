@@ -13,6 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+@font-face {
+  font-family: "Kit Rounded";
+  src: url('./assets/Kit-Rounded_Semibold.otf');
+}
+@font-face {
+  font-family: "Auger Mono";
+  src: url('./assets/Auger Mono Regular.otf');
+}
+@font-face {
+  font-family: "Rubrik-Bold";
+  src: url('./assets/Rubrik-Bold.otf');
+}
+
 a {
   font-weight: 500;
   color: #646cff;

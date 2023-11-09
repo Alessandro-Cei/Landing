@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "Rubrik-Bold";
-    src: url('../../assets/Rubrik-Bold.otf');
-}
 .navbar__placeholder {
     position: relative;
     width: 100vw;
@@ -31,10 +27,11 @@
 .navbar__logo {
    width: 25vh;
 }
-  
-.navbar__links > a {
+
+.navbar__links * {
     text-decoration: none;
     font-family: "Rubrik-Bold";
+    cursor: pointer;
     color: white;
     padding: 0.5rem 1rem;
 

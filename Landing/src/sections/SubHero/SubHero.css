@@ -1,11 +1,3 @@
-@font-face {
-    font-family: "Rubrik-Bold";
-    src: url('../../assets/Rubrik-Bold.otf');
-}
-@font-face {
-    font-family: "Auger Mono Regular";
-    src: url('../../assets/Auger Mono Regular.otf');
-}
 .subhero__container {
     margin: 5vh auto;
     display: flex;
@@ -26,7 +18,8 @@
     font-family: "Rubrik-Bold";
 }
 .subhero__description > h3 {
-    font-family: "Auger Mono Regular";
+    font-family: Inter;
+    font-weight: normal;
 }
 @media(max-width:576px){
     .subhero__container {

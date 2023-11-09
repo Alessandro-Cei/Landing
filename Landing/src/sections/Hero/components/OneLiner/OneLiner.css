@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Auger Mono";
-    src: url('../../assets/Auger Mono Regular.otf');
-}
-
 .oneliner__container {
     padding: 0;
     margin: auto auto auto auto;
