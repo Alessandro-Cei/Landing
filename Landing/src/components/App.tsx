@@ -4,6 +4,7 @@ import Hero from '../sections/Hero/Hero'
 import SubHero from '../sections/SubHero/SubHero'
 import PillsGrid from './PillsGrid/PillsGrid'
 import Sauce from '../sections/Sauce/Sauce'
+import Experiences from '../sections/Experiences/Experiences'
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
       <PillsGrid/>
       <section id='sauce__section'>
         <Sauce/>
+      </section>
+      <section id='experiences__section'>
+        <Experiences/>
       </section>
       
       {/*<SectionTitle color='#B9F08D' symbol='experiences' title='Experiences' subtitle='It has been a long journey and other things will come.'/>
