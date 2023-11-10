@@ -5,6 +5,7 @@ import SubHero from '../sections/SubHero/SubHero'
 import PillsGrid from './PillsGrid/PillsGrid'
 import Sauce from '../sections/Sauce/Sauce'
 import Experiences from '../sections/Experiences/Experiences'
+import Projects from '../sections/Projects/Projects'
 
 function App() {
 
@@ -22,10 +23,11 @@ function App() {
       <section id='experiences__section'>
         <Experiences/>
       </section>
+      <section id='projects__section'>
+        <Projects/>
+      </section>
       
-      {/*<SectionTitle color='#B9F08D' symbol='experiences' title='Experiences' subtitle='It has been a long journey and other things will come.'/>
-      <SectionTitle color='#CDA1FF' symbol='projects' title='Projects' subtitle='Each of them is a sweet child of mine (pun intended).'/>
-    <SectionTitle color='#FFA14F' symbol='contacts' title='Contacts' subtitle='Do you have an idea? Let’s have a chat.'/>*/}
+      {/*<SectionTitle color='#FFA14F' symbol='contacts' title='Contacts' subtitle='Do you have an idea? Let’s have a chat.'/>*/}
     </div>
   )
   

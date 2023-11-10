@@ -1,0 +1,103 @@
+.projects__container {
+    display: flex;
+    flex-direction: column;
+}
+.projects__upper-side {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10% 44% 44%;
+    gap: 1%;
+    width: 90vw;
+    height: 50vh;
+}
+.projects__symbol {
+    width: 100%;
+}
+.projects__text {
+    font-family: Inter;
+    font-weight: normal;
+    text-align: left;
+    width: 90%;
+    margin-top: 8vh;
+}
+.projects__cv-button-container {
+    height: 10%;
+    margin-left: auto;
+}
+.projects__cv-button-container > a {
+    background-color: #CDA1FF;
+    color: #1F1F23;
+    padding: 10px 15px;
+    border-radius: 6px;
+
+    &:hover{
+        background-color: #1F1F23;
+        color: white;
+        border: solid 1px #CDA1FF;
+    }
+}
+.projects__lower-side {
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+}
+.projects__navbar {
+    border-bottom: solid 5px #CDA1FF;
+    margin: 0;
+    padding: 0;
+    margin-left: 10vw;
+    display: flex;
+}
+.projects__navbar > button {
+    padding: 5px 10px 2px 10px;
+    margin: 0 10px;
+    border-radius: 6px 6px 0px 0px;
+
+    &:hover {
+        border-color: #CDA1FF;
+        border-bottom-color: transparent;
+    }
+}
+.projects__navbar > button:nth-child(1) {
+    margin: 0 10px 0 0;
+}
+.single-project {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+}
+.single-project-description > h2{
+    margin-top: 5vh;
+}
+.single-project-description > h4 > span {
+    color: #CDA1FF;
+    font-weight: bold;
+}
+.single-project-description > h4 {
+    text-align: "left";
+    font-family: "Inter";
+    padding-right: 10%
+}
+.single-project-visuals {
+    margin-top: 5vh;
+}
+.single-project-images > img {
+    object-fit: contain;
+    width: 50%;
+    height: auto;
+}
+.single-project-images {
+    margin-top: 5vh;
+    padding-bottom: 15vh;
+    width: auto;
+    height: auto;
+    align-items: baseline;
+}

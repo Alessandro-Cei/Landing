@@ -26,7 +26,7 @@ export default function NavBar() {
         <div className="navbar__links">
         <Link to="sauce__section" smooth={true} duration={500} offset={-(window.innerHeight * 0.15)}>My sauce</Link>
         <Link to="experiences__section" smooth={true} duration={500} offset={-(window.innerHeight * 0.15)}>Experiences</Link>
-        <Link to="hero__section" smooth={true} duration={500}>Projects</Link>
+        <Link to="projects__section" smooth={true} duration={500} offset={-(window.innerHeight * 0.15)}>Projects</Link>
         <Link to="hero__section" smooth={true} duration={500}>Contacts</Link>
         </div>
       </nav>
