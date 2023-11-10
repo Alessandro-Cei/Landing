@@ -7,6 +7,7 @@ import Sauce from '../sections/Sauce/Sauce'
 import Experiences from '../sections/Experiences/Experiences'
 import Projects from '../sections/Projects/Projects'
 import Contacts from '../sections/Contacts/Contacts'
+import Footer from '../sections/Footer/Footer'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <section id='contacts__section'>
         <Contacts/>
       </section>
+      <Footer/>
     </div>
   )
   

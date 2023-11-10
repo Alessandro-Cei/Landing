@@ -1,0 +1,27 @@
+.footer__container {
+    margin-top: 15vh;
+    height: 10vh;
+    width: 100vw;
+    background-color: #17171B;
+}
+.footer__info-wrapper {
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__info-links {
+    display: flex;
+}
+.footer__info-links > a {
+    display: flex;
+}
+.footer__info-links > a > img{
+    width: 5vh;
+    height: 5vh;
+    padding-left: 10px;
+    align-self: center;
+    justify-self: center;
+}
