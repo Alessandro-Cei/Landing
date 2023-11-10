@@ -4,7 +4,7 @@ import symbol from "../../assets/contacts.svg"
 
 export default function Contacts() {
     function sendMail() {
-        
+        alert("Message sent")
     }
     return(
         <>
@@ -14,8 +14,8 @@ export default function Contacts() {
                 <SectionTitle color='#FFA14F' title='Contact me' subtitle='Do you have an idea? Let’s have a chat.'/>
             </div>
             <div className="contacts__lower-side">
-                <form id="contact-form" onSubmit={sendMail} method="POST">
-                <div className="form-group__name-email">
+                <form id="contact-form" onSubmit={sendMail} /*method="POST"*/>
+                    <div className="form-group__name-email">
                         <input type="text" className="form-control" placeholder="Name*"/>
                         <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Email*"/>
                     </div>

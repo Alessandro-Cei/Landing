@@ -19,8 +19,8 @@
     display: flex;
 }
 .footer__info-links > a > img{
-    width: 5vh;
-    height: 5vh;
+    width: 80%;
+    height: 80%;
     padding-left: 10px;
     align-self: center;
     justify-self: center;

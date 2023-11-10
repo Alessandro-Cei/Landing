@@ -13,3 +13,12 @@
 .section-title__container > h3 {
     font-family: "Auger Mono";
 }
+
+@media (max-width: 576px) {
+    .section-title__container > h1 {
+        font-size: 2rem;
+    }
+    .section-title__container > h3 {
+        font-size: 0.8rem;
+    }
+}
