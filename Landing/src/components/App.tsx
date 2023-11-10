@@ -6,6 +6,7 @@ import PillsGrid from './PillsGrid/PillsGrid'
 import Sauce from '../sections/Sauce/Sauce'
 import Experiences from '../sections/Experiences/Experiences'
 import Projects from '../sections/Projects/Projects'
+import Contacts from '../sections/Contacts/Contacts'
 
 function App() {
 
@@ -26,8 +27,9 @@ function App() {
       <section id='projects__section'>
         <Projects/>
       </section>
-      
-      {/*<SectionTitle color='#FFA14F' symbol='contacts' title='Contacts' subtitle='Do you have an idea? Let’s have a chat.'/>*/}
+      <section id='contacts__section'>
+        <Contacts/>
+      </section>
     </div>
   )
   
