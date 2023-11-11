@@ -41,7 +41,7 @@
     margin: 0;
     padding: 0;
     width: 90vw;
-    height: 100vh;
+    height: 70vh;
 }
 .experiences__navbar {
     border-bottom: solid 5px #B9F08D;
@@ -67,7 +67,38 @@
     margin: 0;
     padding: 0;
     width: 70%;
+    height: auto;
     text-align: left;
     margin-left: 10vw;
     margin-top: 10vh;
+}
+
+@media (max-width: 576px) {
+    .experiences__upper-side {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+        width: 90vw;
+        height: auto;
+    }
+    .experiences__symbol {
+        width: 20%;
+        position: relative;
+        right: 5vw;
+    }
+    .experiences__lower-side {
+        padding-top: 10vh;
+    }
+    .experiences__navbar {
+        margin-left: 0vw;
+        font-size: 0.65rem;
+    }
+    .experiences__lower-side > h4 {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 5vh;
+    }
 }

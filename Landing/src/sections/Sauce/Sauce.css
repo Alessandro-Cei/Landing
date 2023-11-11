@@ -20,7 +20,6 @@
 .sauce__image {
     display: flex;
     flex-direction: column;
-    background-color: red;
     align-items: center;
     gap: 5vh;
 }
