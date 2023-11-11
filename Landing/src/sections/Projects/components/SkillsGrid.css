@@ -4,3 +4,17 @@
     align-self: center;
     justify-self: center;
 }
+.skills-grid__pill {
+    display: inline-flex;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    transition: 0.5s;
+    font-family: "Inter";
+    font-weight: bold;
+}
+@media (max-width: 576px) {
+    .skills-grid__container {
+        padding-right: 5%;
+    }
+}

@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 10% 44% 44%;
+    grid-template-columns: 10% 89%;
     gap: 1%;
     width: 90vw;
     height: 50vh;
@@ -100,4 +100,18 @@
     width: auto;
     height: auto;
     align-items: baseline;
+}
+
+@media (max-width: 576px) {
+    .single-project {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        margin-left: 10vw;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
 }

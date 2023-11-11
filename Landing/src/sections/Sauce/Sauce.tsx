@@ -1,7 +1,8 @@
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import "./Sauce.css";
 import symbol from "../../assets/sauce.svg"
-import image from "../../assets/sauce_image.svg"
+import logo from "../../assets/logo.svg"
+import image from "../../assets/sauce-image.svg"
 
 export default function Sauce() {
 
@@ -28,6 +29,7 @@ export default function Sauce() {
                 </h4>
             </div>
             <div className="sauce__image">
+                <img src={logo} alt="Sauce section's logo image" />
                 <img src={image} alt="Sauce section's descriptive image"/>
             </div>
         </div>

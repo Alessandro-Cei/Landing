@@ -4,7 +4,7 @@ export default function Hakulele() {
     return(
         <div className="single-project-description">
                         <div style={{display: "flex", alignItems: "center", paddingTop: "5%"}}>
-                            <img style={{width: "5vw"}} src={hakulele} alt="SakhiApp's icon"/>
+                            <img style={{width: "10vh"}} src={hakulele} alt="SakhiApp's icon"/>
                             <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Hakulele</h2>
                         </div>
                         <h4>

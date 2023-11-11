@@ -11,7 +11,7 @@ export default function SkillsGrid(props: SkillsGridProps) {
     return(
         <div className="skills-grid__container">
             {props.skills.map((element, index) => (
-                <span key={index} className='pill' style={{backgroundColor: backgroundColors[index % colors.length], color: colors[index % colors.length]}}>
+                <span key={index} className='skills-grid__pill' style={{backgroundColor: backgroundColors[index % colors.length], color: colors[index % colors.length]}}>
                     {element}
                 </span>
             ))}

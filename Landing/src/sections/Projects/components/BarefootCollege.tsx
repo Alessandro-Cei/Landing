@@ -21,7 +21,7 @@ export default function BarefootCollege() {
                             eventually sell solar powered products. They become <span>Solar Mamas.</span>
                         </h4>
                         <div style={{display: "flex", alignItems: "center", paddingTop: "5%"}}>
-                            <img style={{width: "5vw"}} src={sakhi} alt="SakhiApp's icon"/>
+                            <img style={{width: "10vh"}} src={sakhi} alt="SakhiApp's icon"/>
                             <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Sakhi App</h2>
                         </div>
                         <h4>
@@ -32,7 +32,7 @@ export default function BarefootCollege() {
                             their data with Dashboard App.
                         </h4>
                         <div style={{display: "flex", alignItems: "center", paddingTop: "5%"}}>
-                            <img style={{width: "5vw"}} src={dashboard} alt="DashboardApp's icon"/>
+                            <img style={{width: "10vh"}} src={dashboard} alt="DashboardApp's icon"/>
                             <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Dashboard App</h2>
                         </div>
                         <h4>
