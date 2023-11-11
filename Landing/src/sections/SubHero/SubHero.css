@@ -1,5 +1,5 @@
 .subhero__container {
-    margin: 5vh auto;
+    margin: 5vh auto auto auto;
     display: flex;
     align-items: center;
 }
@@ -12,6 +12,8 @@
 .subhero__description {
     width: 50%;
     text-align: left;
+    height: auto;
+    background-color: rebeccapurple;
     padding: 0 5%;
 }
 .subhero__description > h2 {

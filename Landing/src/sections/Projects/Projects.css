@@ -102,6 +102,9 @@
 }
 
 @media (max-width: 576px) {
+    .projects__container {
+        margin-top: 10vh;
+    }
     .projects__upper-side {
         margin: 0;
         padding: 0;
