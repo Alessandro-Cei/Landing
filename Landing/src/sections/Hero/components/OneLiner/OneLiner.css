@@ -1,9 +1,7 @@
 .oneliner__container {
-    padding: 0;
-    margin: auto auto auto auto;
     line-height: 30px;
     width: 70%;
-    height: 40%;
+    height: 50%;
     text-align: left;
     position: relative;
     display: inline-block;
@@ -29,7 +27,6 @@
     .oneliner__container {
         line-height: 15px;
         width: 50%;
-        margin-left: 10%;
     }
     .oneliner__static-text {
         font-size: 17px;
