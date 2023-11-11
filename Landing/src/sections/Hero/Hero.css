@@ -26,6 +26,7 @@
     .hero__container {
       width: 100vw;
       flex-direction: column;
+      margin-top: 5vh;
     }
     .hero__left-side {
       width: 80%;
