@@ -69,7 +69,6 @@
     height: auto;
     text-align: left;
     margin-left: 10vw;
-    margin-top: 10vh;
     display: grid;
     grid-template-columns: 48% 48%;
     gap: 4%;
@@ -103,14 +102,29 @@
 }
 
 @media (max-width: 576px) {
-    .single-project {
+    .projects__upper-side {
         margin: 0;
         padding: 0;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+        width: 90vw;
         height: auto;
-        text-align: left;
-        margin-left: 10vw;
-        margin-top: 10vh;
+    }
+    .projects__symbol {
+        width: 20%;
+        position: relative;
+        right: 5vw;
+    }
+    .projects__lower-side {
+        padding-top: 5vh;
+    }
+    .projects__navbar {
+        margin-left: 0vw;
+        font-size: 0.65rem;
+    }
+    .single-project {
+        margin-left: 0;
         display: flex;
         flex-direction: column;
     }
