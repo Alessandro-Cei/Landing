@@ -26,12 +26,15 @@
     .hero__container {
       width: 100vw;
       flex-direction: column;
-      margin-top: 5vh;
     }
     .hero__left-side {
+      position: absolute;
+      z-index: 2;
       width: 80%;
     }
     .hero__right-side {
+      z-index: 1;
+      position: relative;
       align-self: center;
       margin-left: 40%;
     }

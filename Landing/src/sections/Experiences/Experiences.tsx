@@ -30,7 +30,7 @@ export default function Experiences() {
                     </h4>
                 </div>
                 <div className="experiences__cv-button-container">
-                    <a href="src/assets/Cei Alessandro CV ENG.pdf" target="_blank">View full CV</a>
+                    <a href="./public/Cei Alessandro CV ENG.pdf" target="_blank">View full CV</a>
                 </div>
             </div>
             <div className="experiences__lower-side">
