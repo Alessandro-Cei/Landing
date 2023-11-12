@@ -16,7 +16,7 @@ export default function OneLiner() {
           typeSpeed: 50,
           backSpeed: 20,
           loop: true,
-          loopcount: Infinity,
+          loopCount: Infinity,
           smartBackspace: false,
           backDelay: 2000,
           preStringTyped: (arrayPos: SetStateAction<number>) => {
