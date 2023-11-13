@@ -45,7 +45,7 @@
 }
 
  #contact-form {
-    font-family: Inter;
+    font-family: "Inter";
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +78,7 @@
     box-sizing: border-box;
     background-color: transparent;
     border-bottom: solid 1px #FFA14F;
-    font-family: Inter;
+    font-family: "Inter";
  }
 .form-group {
     display: flex;
