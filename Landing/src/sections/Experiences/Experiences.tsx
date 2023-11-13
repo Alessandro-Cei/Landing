@@ -2,6 +2,7 @@ import "./Experiences.css";
 import symbol from "../../assets/experiences.svg"
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { useState } from "react";
+import pdf from "../../../public/Cei Alessandro CV ENG.pdf"
 
 const experiences:string[] = [
     "WorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWork",
@@ -30,7 +31,7 @@ export default function Experiences() {
                     </h4>
                 </div>
                 <div className="experiences__cv-button-container">
-                    <a href="./public/Cei Alessandro CV ENG.pdf" target="_blank">View full CV</a>
+                    <a href={pdf} target="_blank">View full CV</a>
                 </div>
             </div>
             <div className="experiences__lower-side">

@@ -27,6 +27,9 @@
     }
 
     @media(max-width:576px){
+        .logo__container {
+            justify-content: center;
+        }
         .logo__icon {
             width: 20%;
         }
