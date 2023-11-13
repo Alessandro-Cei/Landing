@@ -62,6 +62,7 @@
     margin: 1vw;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 0!important;
  }
  .form-group__topic {
     display: flex;
