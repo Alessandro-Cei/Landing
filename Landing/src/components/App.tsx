@@ -17,7 +17,9 @@ function App() {
         <Hero/>
       </section>
       <NavBar/>
-      <SubHero/>
+      <section id='subhero__section'>
+        <SubHero/>
+      </section>
       <PillsGrid/>
       <section id='sauce__section'>
         <Sauce/>

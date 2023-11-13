@@ -21,6 +21,30 @@
     align-self: center;
     flex-direction: column;
   }
+  .chevron {
+    height: 3vw;
+    width: 3vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .chevron > img {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .chevron > img:nth-child(1):hover + img:nth-child(2) {
+    opacity: 100%;
+    transition: linear;
+    transition-duration: 0.3s;
+  }
+  .chevron > img:nth-child(2) {
+    margin-top: -20%;
+    width: auto;
+    opacity: 0%;
+    transition: linear;
+    transition-duration: 0.3s;
+  }
+
   
   @media(max-width:576px){
     .hero__container {
@@ -37,7 +61,11 @@
       overflow: hidden;
     }
     .hero__left-side > *:nth-child(2) {
+      height: 15vh;
       margin-top: 10vw;
+      margin-left: 15vw;
+    }
+    .hero__left-side > *:nth-child(3) {
       margin-left: 15vw;
     }
     .hero__right-side {
