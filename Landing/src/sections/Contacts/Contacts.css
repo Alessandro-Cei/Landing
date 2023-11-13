@@ -1,8 +1,28 @@
+.contacts__background {
+   position: absolute;
+   display: grid;
+   grid-template-columns: 35% 35%;
+   gap: auto;
+   justify-content: space-between;
+   width: 100vw;
+   height: 100vh;
+   z-index: 0;
+   left: 0;
+   margin-top: 8vh;
+   align-items: center;
+   overflow: hidden;
+}
+.contacts__background > div > img {
+   object-fit: contain;
+   width: 70%;
+}
 .contacts__container {
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+   position: relative;
+   z-index: 2;
+   margin-top: 10vh;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
 }
 .contacts__symbol {
    width: 100%;
@@ -116,6 +136,9 @@
  }
 
  @media (max-width: 576px) {
+   .contacts__background {
+      display: none;
+   }
    .contacts__upper-side {
       margin: 0;
       padding: 0;
