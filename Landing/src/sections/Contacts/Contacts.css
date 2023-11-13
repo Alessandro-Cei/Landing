@@ -4,7 +4,7 @@
    grid-template-columns: 35% 35%;
    gap: auto;
    justify-content: space-between;
-   width: 100vw;
+   width: 100%;
    height: 100vh;
    z-index: 0;
    left: 0;
@@ -71,7 +71,7 @@
  }
 .topic {
     margin: 1vw;
-    width: 100vw;
+    width: 100%;
     border: none;
     outline: none;
     background-color: transparent;
