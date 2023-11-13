@@ -74,6 +74,7 @@
     margin: 1vw;
     width: 100%;
     border: none;
+    border-radius: 0!important;
     outline: none;
     box-sizing: border-box;
     background-color: transparent;
