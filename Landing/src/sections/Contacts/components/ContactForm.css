@@ -17,6 +17,7 @@ input {
     font-size: medium;
     box-sizing: border-box;
     border: none;
+    border-radius: 0!important;
     outline: none;
     background-color: #1F1F23;
     border-bottom: solid 2px #FFA14F;
@@ -85,5 +86,12 @@ textarea {
 @media (max-width: 576px) {
     form {
        width: 95%;
+    }
+    .submit-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        margin-top: -3vh;
     }
 }

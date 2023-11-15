@@ -5,10 +5,9 @@ import { useState } from "react";
 import pdf from "../../../public/Cei Alessandro CV ENG.pdf"
 
 const experiences:string[] = [
-    "WorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWorkWork",
-    "Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education",
+    "Barefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot College",
     "Apple Developer AcademyApple Developer AcademyApple Developer AcademyApple Developer AcademyApple Developer Academy",
-    "Barefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot College"
+    "Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education"
 ]
 
 export default function Experiences() {
@@ -40,25 +39,19 @@ export default function Experiences() {
                         color: category == 0 ? "#1F1F23" : "#B9F08D",
                         backgroundColor: category == 0 ? "#B9F08D" : "#1F1F23"
                     }} onClick={() => setCategory(0)}>
-                        Work
+                        Barefoot College
                     </button>
                     <button style={{
                         color: category == 1 ? "#1F1F23" : "#B9F08D",
                         backgroundColor: category == 1 ? "#B9F08D" : "#1F1F23"
                     }} onClick={() => setCategory(1)}>
-                        Education
+                        Apple Developer Academy
                     </button>
                     <button style={{
                         color: category == 2 ? "#1F1F23" : "#B9F08D",
                         backgroundColor: category == 2 ? "#B9F08D" : "#1F1F23"
                     }} onClick={() => setCategory(2)}>
-                        Apple Developer Academy
-                    </button>
-                    <button style={{
-                        color: category == 3 ? "#1F1F23" : "#B9F08D",
-                        backgroundColor: category == 3 ? "#B9F08D" : "#1F1F23"
-                    }} onClick={() => setCategory(3)}>
-                        Barefoot College
+                        Education
                     </button>
                 </nav>
                 <h4>
