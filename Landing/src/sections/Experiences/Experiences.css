@@ -28,13 +28,13 @@
 .experiences__cv-button-container > a {
     background-color: #B9F08D;
     color: #1F1F23;
-    padding: 10px 15px;
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 14px;
 
     &:hover{
         background-color: #1F1F23;
         color: white;
-        border: solid 1px #B9F08D;
+        border: solid 2px #B9F08D;
     }
 }
 .experiences__lower-side {
