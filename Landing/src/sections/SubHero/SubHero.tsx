@@ -18,7 +18,9 @@ export default function SubHero() {
         setPictureOpacity(0);
         setTimeout(() => {
             setPictureIndex((prevIndex) => (prevIndex + 1) % pictures.length);
-            setPictureOpacity(1);
+            setTimeout(() => {
+                setPictureOpacity(1);
+            }, 250);
         }, 250); 
       }, 4000);
       return () => clearTimeout(timeout);
