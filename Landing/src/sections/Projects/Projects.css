@@ -70,8 +70,7 @@
     text-align: left;
     margin-left: 10vw;
     display: grid;
-    grid-template-columns: 48% 48%;
-    gap: 4%;
+    grid-template-columns: 45% 55%;
 }
 .single-project-description > h2{
     margin-top: 5vh;
@@ -91,15 +90,14 @@
 }
 .single-project-images > img {
     object-fit: contain;
-    width: 50%;
-    height: auto;
+    transition: 'opacity 0.25s ease-in-out';
 }
 .single-project-images {
     margin-top: 5vh;
-    padding-bottom: 15vh;
-    width: auto;
-    height: auto;
+    width: 80%;
+    height: 80vh;
     align-items: baseline;
+    background-color: red;
 }
 
 @media (max-width: 576px) {
@@ -131,5 +129,9 @@
         margin-left: 0;
         display: flex;
         flex-direction: column;
+    }
+    .single-project-images {
+        width: 100%;
+        height: 60vh;
     }
 }
