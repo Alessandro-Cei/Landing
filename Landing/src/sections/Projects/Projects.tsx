@@ -1,4 +1,9 @@
 import "./Projects.css";
+import { useState, useEffect, useRef } from "react";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SkillsGrid from "./components/SkillsGrid";
+import BarefootCollege from "./components/BarefootCollege";
+import Hakulele from "./components/Hakulele";
 import symbol from "../../assets/projects.svg";
 import barefoot1 from "../../assets/barefoot1.png";
 import barefoot2 from "../../assets/barefoot2.png";
@@ -6,25 +11,20 @@ import barefoot3 from "../../assets/barefoot3.png";
 import hakulele1 from "../../assets/hakulele1.png";
 import hakulele2 from "../../assets/hakulele2.png";
 import hakulele3 from "../../assets/hakulele3.png";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import { useState, useEffect } from "react";
-import SkillsGrid from "./components/SkillsGrid";
-import BarefootCollege from "./components/BarefootCollege";
-import Hakulele from "./components/Hakulele";
 
 export default function Projects () {
 
     const [category, setCategory] = useState(0);
     const [pictures, setPictures] = useState([barefoot1, barefoot2, barefoot3]);
-    const [picturesStyles, setPicturesStyles] = useState(
-        [
+    const [pictureIndex, setPictureIndex] = useState(0);
+    const [fadeOut, setFadeOut] = useState(false);
+    const [imagesLoaded, setImagesLoaded] = useState(0);  
+    const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
+    const [picturesStyles, setPicturesStyles] = useState([
             { maxWidth: 'auto', maxHeight: '100%'},
             { maxWidth: '100%', maxHeight: 'auto'},
             { maxWidth: '100%', maxHeight: 'auto'}
-        ]
-    );
-    const [pictureIndex, setPictureIndex] = useState(0);
-    const [fadeOut, setFadeOut] = useState(false);
+    ]);
 
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -35,10 +35,22 @@ export default function Projects () {
           setFadeOut(false);
         }, 1000); 
       }, 4000); 
-  
       return () => clearInterval(intervalId);
     }, [pictureIndex, pictures]);
-
+    
+    useEffect(() => {
+        if (imagesLoaded === pictures.length) {
+            const currentImage = imagesRef.current[pictureIndex];
+            if (currentImage) {
+                currentImage.style.opacity = '1';
+            }
+        }
+    }, [imagesLoaded, pictureIndex, pictures]);
+    
+    const handleImageLoad = () => {
+        setImagesLoaded((prev) => prev + 1);
+    };
+    
     function changeCategory(num: number) {
         if (num == 0) {
             setCategory(0)
@@ -60,7 +72,7 @@ export default function Projects () {
             ])
         }
     };
-    
+
     return(
         <div className="projects__container">
             <div className="projects__upper-side">
@@ -108,11 +120,16 @@ export default function Projects () {
                                               "On Site Usability Testing", "Animations", "iOS", "Native Components"]
                         }/>
                         <div className="single-project-images">
-                            <img src={pictures[pictureIndex]} alt={`Image ${pictureIndex + 1}`} style={{
+                            <img 
+                            src={pictures[pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
+                            style={{
                                 ...picturesStyles[pictureIndex],
-                                opacity: fadeOut ? 0 : 1,
+                                opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,
                                 transition: 'opacity 0.5s ease-in-out',
-                            }}/>
+                            }} 
+                            onLoad={handleImageLoad}
+                            ref={(el) => (imagesRef.current[pictureIndex] = el)}
+                            />
                         </div>
                     </div>
                 </div>
