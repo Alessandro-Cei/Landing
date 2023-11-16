@@ -20,6 +20,8 @@ export default function SubHero() {
             img.src = pictures[i];
             img.onload = () => {
                 setLoadedPictures((prev) => prev + 1);
+                console.log(pictures[i]);
+                console.log(loadedPictures);
             }
         }
     }, []);
