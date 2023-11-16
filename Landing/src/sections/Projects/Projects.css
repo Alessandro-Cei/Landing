@@ -97,7 +97,6 @@
     width: 80%;
     height: 80vh;
     align-items: baseline;
-    background-color: red;
 }
 
 @media (max-width: 576px) {
