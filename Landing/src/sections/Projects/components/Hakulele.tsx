@@ -50,8 +50,8 @@ export default function Hakulele() {
                             <div className="footer__info-links" style={{
                                 marginTop: "2vh",
                             }}>
-                                <a href="https://apps.apple.com/us/app/hakulele-ukulele-tuner-more/id6453520108" target="_blank"><img src={apple} alt="" style={{paddingLeft: "0px"}}/></a>
-                                <a href="https://www.instagram.com/hakulele_app/" target="_blank"><img src={instagram} alt="" style={{paddingLeft: "0px", marginLeft:"-5px"}}/></a>
+                                <a href="https://apps.apple.com/us/app/hakulele-ukulele-tuner-more/id6453520108" target="_blank"><img src={apple} alt="Project's App Store page" style={{paddingLeft: "0px"}}/></a>
+                                <a href="https://www.instagram.com/hakulele_app/" target="_blank"><img src={instagram} alt="Project's instagram page" style={{paddingLeft: "0px", marginLeft:"-5px"}}/></a>
                             </div>
                         </h4>
                     </div>

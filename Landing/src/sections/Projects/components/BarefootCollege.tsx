@@ -1,5 +1,6 @@
 import sakhi from "../../../assets/sakhi.svg"
 import dashboard from "../../../assets/dashboard.svg"
+import behance from "../../../assets/behance.svg"
 
 export default function BarefootCollege() {
     return(
@@ -41,6 +42,11 @@ export default function BarefootCollege() {
                             the organization,so each of them have different versions of the app based 
                             on their tasks.
                         </h4>
+                        <div className="footer__info-links" style={{
+                            marginTop: "2vh",
+                        }}>
+                            <a href="https://www.behance.net/gallery/172661547/Barefoot-Suite-iOS-iPadOS-applications" target="_blank"><img src={behance} alt="Project's Behance page" style={{paddingLeft: "0px"}}/></a>
+                        </div>
                     </div>
     )
 }
