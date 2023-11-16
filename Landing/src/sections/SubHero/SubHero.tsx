@@ -40,7 +40,7 @@ export default function SubHero() {
 
     return(
         <div className="subhero__container">
-            {loadedPictures == pictures.length * 2 ? 
+            {loadedPictures == pictures.length ? 
                 <img src={pictures[pictureIndex]} alt="Picture of the Developer in action" className="subhero__picture"
                 style={{
                     opacity: pictureOpacity,
