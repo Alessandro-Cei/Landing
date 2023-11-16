@@ -23,6 +23,7 @@ input {
     border-bottom: solid 2px #FFA14F;
     font-family: "Inter";
     height: 5vh;
+    color: white;
 }
 textarea {
     min-height: 20vh;
@@ -33,6 +34,11 @@ textarea {
     padding: 15px;
     font-family: "Inter";
     margin-top: -5vh;
+    color: white;
+
+    &:focus {
+        outline: none;
+    }
 }
 .form-inner-group-container {
     display: grid;

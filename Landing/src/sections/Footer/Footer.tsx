@@ -1,7 +1,6 @@
 import "./Footer.css";
 import linkedin from "../../assets/linkedin.svg"
 import github from "../../assets/github.svg"
-import instagram from "../../assets/instagram.svg"
 import behance from "../../assets/behance.svg"
 
 export default function Footer() {
