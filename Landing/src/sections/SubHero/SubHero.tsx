@@ -12,7 +12,17 @@ export default function SubHero() {
 
     const [pictureIndex, setPictureIndex] = useState(0);
     const [pictureOpacity, setPictureOpacity] = useState(1);
+    const [loadedPictures, setLoadedPictures] = useState(0)
 
+    useEffect(() => {
+        for (let i=0; i<pictures.length; i++) {
+            const img = new Image();
+            img.src = pictures[i];
+            img.onload = () => {
+                setLoadedPictures((prev) => prev + 1);
+            }
+        }
+    }, []);
     useEffect(() => {
       const timeout = setTimeout(() => {
         setPictureOpacity(0);
@@ -28,12 +38,16 @@ export default function SubHero() {
 
     return(
         <div className="subhero__container">
-            <img src={pictures[pictureIndex]} alt="Picture of the Developer in action" className="subhero__picture"
+            {loadedPictures == pictures.length * 2 ? 
+                <img src={pictures[pictureIndex]} alt="Picture of the Developer in action" className="subhero__picture"
                 style={{
                     opacity: pictureOpacity,
                     transition: 'opacity 0.25s ease-in-out'
                 }}
-            />
+                />
+            :
+                <div style={{width: "50%"}}></div>
+            }
             <div className="subhero__description">
                 <h1>iOS Development at its human finest</h1>
                 <h3>
