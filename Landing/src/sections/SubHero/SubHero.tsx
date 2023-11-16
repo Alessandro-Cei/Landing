@@ -35,8 +35,13 @@ export default function SubHero() {
                 }}
             />
             <div className="subhero__description">
-                <h2>iOS Development at its human finest</h2>
-                <h3>iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest iOS Development at its human finest iOS Development at its human finestiOS Development at its human finest</h3>
+                <h1>iOS Development at its human finest</h1>
+                <h3>
+                It is not just a matter of writing code: software solutions are our way to improve life and processes, tools for people. 
+                <br/>
+                <br/>
+                The focus has to be indeed on people, how software impacts our way to optimize our tasks, our fullfilment to every-day needs.
+                </h3>
             </div>
         </div>
     )

@@ -10,12 +10,12 @@
     border-bottom-right-radius: 16px;
 }
 .subhero__description {
-    width: 50%;
+    width: 40%;
     text-align: left;
     height: auto;
-    padding: 0 5%;
+    padding: 0 7%;
 }
-.subhero__description > h2 {
+.subhero__description > h1 {
     font-family: "Rubrik-Bold";
 }
 .subhero__description > h3 {
@@ -33,5 +33,9 @@
     }
     .subhero__description {
         width: 80%;
+        font-size: 0.8rem;
+    }
+    .subhero__description > h1 {
+        font-size: 2rem;
     }
 }
