@@ -11,7 +11,7 @@ const pictures:string[] = [picture1, picture2, picture3, picture4, picture5];
 export default function SubHero() {
 
     const [pictureIndex, setPictureIndex] = useState(0);
-    const [pictureOpacity, setPictureOpacity] = useState(1);
+    const [fadeOut, setFadeOut] = useState(false);
     const [loadedPictures, setLoadedPictures] = useState(0)
 
     useEffect(() => {
@@ -26,24 +26,23 @@ export default function SubHero() {
         }
     }, []);
     useEffect(() => {
-      const timeout = setTimeout(() => {
-        setPictureOpacity(0);
-        setTimeout(() => {
-            setPictureIndex((prevIndex) => (prevIndex + 1) % pictures.length);
-            setTimeout(() => {
-                setPictureOpacity(1);
-            }, 250);
-        }, 250); 
-      }, 4000);
-      return () => clearTimeout(timeout);
-    }, [pictureIndex, pictures]);
+        const intervalId = setInterval(() => {
+          setFadeOut(true);
+          setTimeout(() => {
+            const newIndex = (pictureIndex + 1) % pictures.length;
+            setPictureIndex(newIndex);
+            setFadeOut(false);
+          }, 500); 
+        }, 4000); 
+        return () => clearInterval(intervalId);
+      }, [pictureIndex, pictures]);
 
     return(
         <div className="subhero__container">
             {loadedPictures == pictures.length ? 
                 <img src={pictures[pictureIndex]} alt="Picture of the Developer in action" className="subhero__picture"
                 style={{
-                    opacity: pictureOpacity,
+                    opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,
                     transition: 'opacity 0.25s ease-in-out'
                 }}
                 />

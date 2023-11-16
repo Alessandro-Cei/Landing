@@ -18,7 +18,7 @@ export default function Projects () {
     const [pictures, setPictures] = useState([barefoot1, barefoot2, barefoot3]);
     const [pictureIndex, setPictureIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
-    const [imagesLoaded, setImagesLoaded] = useState(0);  
+    const [loadedPictures, setLoadedPictures] = useState(0)
     const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
     const [picturesStyles, setPicturesStyles] = useState([
             { maxWidth: 'auto', maxHeight: '100%'},
@@ -33,23 +33,22 @@ export default function Projects () {
           const newIndex = (pictureIndex + 1) % pictures.length;
           setPictureIndex(newIndex);
           setFadeOut(false);
-        }, 1000); 
+        }, 500); 
       }, 4000); 
       return () => clearInterval(intervalId);
     }, [pictureIndex, pictures]);
     
     useEffect(() => {
-        if (imagesLoaded === pictures.length) {
-            const currentImage = imagesRef.current[pictureIndex];
-            if (currentImage) {
-                currentImage.style.opacity = '1';
+        for (let i=0; i<pictures.length; i++) {
+            const img = new Image();
+            img.src = pictures[i];
+            img.onload = () => {
+                setLoadedPictures((prev) => prev + 1);
+                console.log(pictures[i]);
+                console.log(loadedPictures);
             }
         }
-    }, [imagesLoaded, pictureIndex, pictures]);
-    
-    const handleImageLoad = () => {
-        setImagesLoaded((prev) => prev + 1);
-    };
+    }, []);
     
     function changeCategory(num: number) {
         if (num == 0) {
@@ -120,16 +119,19 @@ export default function Projects () {
                                               "On Site Usability Testing", "Animations", "iOS", "Native Components"]
                         }/>
                         <div className="single-project-images">
-                            <img 
-                            src={pictures[pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
-                            style={{
-                                ...picturesStyles[pictureIndex],
-                                opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,
-                                transition: 'opacity 0.5s ease-in-out',
-                            }} 
-                            onLoad={handleImageLoad}
-                            ref={(el) => (imagesRef.current[pictureIndex] = el)}
-                            />
+                            {loadedPictures == pictures.length ?
+                                <img 
+                                src={pictures[pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
+                                style={{
+                                    ...picturesStyles[pictureIndex],
+                                    opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,
+                                    transition: 'opacity 0.5s ease-in-out',
+                                }} 
+                                ref={(el) => (imagesRef.current[pictureIndex] = el)}
+                                />
+                            :
+                                <div></div>
+                            }
                         </div>
                     </div>
                 </div>
