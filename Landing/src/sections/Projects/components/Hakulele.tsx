@@ -1,4 +1,7 @@
 import hakulele from "../../../assets/hakulele.svg"
+import instagram from "../../../assets/instagram.svg"
+import apple from "../../../assets/apple.svg"
+
 
 export default function Hakulele() {
     return(
@@ -26,7 +29,7 @@ export default function Hakulele() {
                             of every chord and train your ears. 
                             <br/>
                             <br/>
-                            Otherwise, the dynamic tuner actively listens to what you are playing, 
+                            Otherwise, the dynamic tuner <span>actively listens</span> to what you are playing, 
                             recognizing the played chord and informing you about the state of its 
                             tuning. The <span>visual representation of the headstock</span> helps you to find the 
                             right tuner key.
@@ -38,6 +41,18 @@ export default function Hakulele() {
                             scales. From a picker, you can <span>choose the scale</span> and all its chords (from C 
                             to B) are visualised in the view. Every chord has its own tab which displays  
                             <span> how to place the fingers</span> on the fretboard.
+                            <br/>
+                            <br/>
+                            <span style={{fontWeight: "bold", fontSize: "x-large"}}>App Localizations</span>
+                            <br/>
+                            Hakulele is available worldwide and is currently localized in 13 countries: USA, Great Britain, 
+                            Italy, Spain, Portugal, Poland, France, Germany, Brazil, Australia, Japan, Canada, Mexico.
+                            <div className="footer__info-links" style={{
+                                marginTop: "2vh",
+                            }}>
+                                <a href="https://apps.apple.com/us/app/hakulele-ukulele-tuner-more/id6453520108" target="_blank"><img src={apple} alt="" style={{paddingLeft: "0px"}}/></a>
+                                <a href="https://www.instagram.com/hakulele_app/" target="_blank"><img src={instagram} alt="" style={{paddingLeft: "0px", marginLeft:"-5px"}}/></a>
+                            </div>
                         </h4>
                     </div>
     )
