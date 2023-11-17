@@ -48,23 +48,16 @@ export default function Projects () {
 
 
     function loadPictures() {
-        let promises: Promise<number>[] = [];
-        for(let i=0; i<pictures.length; i++) {
-            promises.concat(picturePromise(i))
-        }
-        Promise.all(promises).then(() => {
-            setLoadedPictures(true)
-        });
+        let promises: Promise<void>[] = pictures[category ?? 0].map(e => picturePromise(e))
+        Promise.all(promises).then(() => setLoadedPictures(true));
     }
     
-    function picturePromise(index: number) {
-        return new Promise<number>((resolve) => {
+    function picturePromise(element: string) {
+        return new Promise<void>(resolve => {
             const img = new Image();
-            img.src = pictures[category ?? 0][index];
-            img.onload = () => {
-                resolve(0);
-            }
-        })
+            img.src = element;
+            img.onload = () => resolve();
+        });
     }
     
     function changeCategory(num: number) {
