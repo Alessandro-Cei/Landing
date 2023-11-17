@@ -12,19 +12,8 @@ export default function SubHero() {
 
     const [pictureIndex, setPictureIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
-    const [loadedPictures, setLoadedPictures] = useState(0)
+    const [loadedPictures, setLoadedPictures] = useState(false)
 
-    useEffect(() => {
-        for (let i=0; i<pictures.length; i++) {
-            const img = new Image();
-            img.src = pictures[i];
-            img.onload = () => {
-                setLoadedPictures((prev) => prev + 1);
-                console.log(pictures[i]);
-                console.log(loadedPictures);
-            }
-        }
-    }, []);
     useEffect(() => {
         const intervalId = setInterval(() => {
           setFadeOut(true);
@@ -35,11 +24,35 @@ export default function SubHero() {
           }, 500); 
         }, 4000); 
         return () => clearInterval(intervalId);
-      }, [pictureIndex, pictures]);
+    }, [pictureIndex, pictures]);
+
+    useEffect(() => {
+        loadPictures()
+    }, []);
+
+    function loadPictures() {
+        let promises: Promise<number>[] = [];
+        for(let i=0; i<pictures.length; i++) {
+            promises.concat(picturePromise(i))
+        }
+        Promise.all(promises).then(() => {
+            setLoadedPictures(true)
+        });
+    }
+    
+    function picturePromise(index: number) {
+        return new Promise<number>((resolve) => {
+            const img = new Image();
+            img.src = pictures[index];
+            img.onload = () => {
+                resolve(0);
+            }
+        })
+    }
 
     return(
         <div className="subhero__container">
-            {loadedPictures == pictures.length ? 
+            {loadedPictures == true ? 
                 <img src={pictures[pictureIndex]} alt="Picture of the Developer in action" className="subhero__picture"
                 style={{
                     opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,

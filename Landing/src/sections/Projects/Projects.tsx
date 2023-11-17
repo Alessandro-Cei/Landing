@@ -14,11 +14,11 @@ import hakulele3 from "../../assets/hakulele3.png";
 
 export default function Projects () {
 
-    const [category, setCategory] = useState(0);
-    const [pictures, setPictures] = useState([barefoot1, barefoot2, barefoot3]);
+    const pictures:string[][] = [[barefoot1, barefoot2, barefoot3],[hakulele1, hakulele2, hakulele3]]
+    const [category, setCategory] = useState<number | null>(null);
     const [pictureIndex, setPictureIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
-    const [loadedPictures, setLoadedPictures] = useState(0)
+    const [loadedPictures, setLoadedPictures] = useState(false)
     const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
     const [picturesStyles, setPicturesStyles] = useState([
             { maxWidth: 'auto', maxHeight: '100%'},
@@ -30,7 +30,7 @@ export default function Projects () {
       const intervalId = setInterval(() => {
         setFadeOut(true);
         setTimeout(() => {
-          const newIndex = (pictureIndex + 1) % pictures.length;
+          const newIndex = (pictureIndex + 1) % pictures[category ?? 0].length;
           setPictureIndex(newIndex);
           setFadeOut(false);
         }, 500); 
@@ -39,31 +39,44 @@ export default function Projects () {
     }, [pictureIndex, pictures]);
     
     useEffect(() => {
-        for (let i=0; i<pictures.length; i++) {
-            const img = new Image();
-            img.src = pictures[i];
-            img.onload = () => {
-                setLoadedPictures((prev) => prev + 1);
-                console.log(pictures[i]);
-                console.log(loadedPictures);
-            }
+        if (category == null) {
+            setCategory(0)
+        } else {
+            loadPictures()
         }
-    }, []);
+    }, [category]);
+
+
+    function loadPictures() {
+        let promises: Promise<number>[] = [];
+        for(let i=0; i<pictures.length; i++) {
+            promises.concat(picturePromise(i))
+        }
+        Promise.all(promises).then(() => {
+            setLoadedPictures(true)
+        });
+    }
+    
+    function picturePromise(index: number) {
+        return new Promise<number>((resolve) => {
+            const img = new Image();
+            img.src = pictures[category ?? 0][index];
+            img.onload = () => {
+                resolve(0);
+            }
+        })
+    }
     
     function changeCategory(num: number) {
+        setCategory(num)
+        setPictureIndex(0)
         if (num == 0) {
-            setCategory(0)
-            setPictures([barefoot1, barefoot2, barefoot3])
-            setPictureIndex(0)
             setPicturesStyles([
                 { maxWidth: 'auto', maxHeight: '100%'},
                 { maxWidth: '100%', maxHeight: 'auto'},
                 { maxWidth: '100%', maxHeight: 'auto'}
             ])
         } else {
-            setCategory(1)
-            setPictureIndex(0)
-            setPictures([hakulele1, hakulele2, hakulele3])
             setPicturesStyles([
                 { maxWidth: 'auto', maxHeight: '100%'},
                 { maxWidth: 'auto', maxHeight: '100%'},
@@ -119,9 +132,9 @@ export default function Projects () {
                                               "On Site Usability Testing", "Animations", "iOS", "Native Components"]
                         }/>
                         <div className="single-project-images">
-                            {loadedPictures == pictures.length ?
+                            {loadedPictures == true ?
                                 <img 
-                                src={pictures[pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
+                                src={pictures[category ?? 0][pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
                                 style={{
                                     ...picturesStyles[pictureIndex],
                                     opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,
