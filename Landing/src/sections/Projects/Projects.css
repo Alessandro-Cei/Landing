@@ -1,6 +1,7 @@
 .projects__container {
     display: flex;
     flex-direction: column;
+    margin-top: 5vh;
 }
 .projects__upper-side {
     margin: 0;

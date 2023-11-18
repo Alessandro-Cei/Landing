@@ -9,7 +9,8 @@
     grid-template-columns: 10% 44% 44%;
     gap: 1%;
     width: 90vw;
-    height: 50vh;
+    height: auto;
+    margin-bottom: 5vh;
 }
 .experiences__symbol {
     width: 100%;
@@ -41,7 +42,7 @@
     margin: 0;
     padding: 0;
     width: 90vw;
-    height: 70vh;
+    min-height: 100vh;
 }
 .experiences__navbar {
     border-bottom: solid 5px #B9F08D;
@@ -63,14 +64,22 @@
 .experiences__navbar > button:nth-child(1) {
     margin: 0 10px 0 0;
 }
-.experiences__lower-side > h4 {
+
+.single-experience-description {
     margin: 0;
     padding: 0;
     width: 70%;
     height: auto;
     text-align: left;
     margin-left: 10vw;
-    margin-top: 10vh;
+    margin-top: 5vh;
+}
+.single-experience-description > h4 {
+    font-weight: normal;
+}
+.single-experience-description > h4 > span {
+    font-weight: bold;
+    color: #B9F08D;
 }
 
 @media (max-width: 576px) {
@@ -103,5 +112,9 @@
         height: auto;
         margin-left: 0;
         margin-top: 5vh;
+    }
+    .single-experience-description {
+        width: 90%;
+        margin-left: 0;
     }
 }

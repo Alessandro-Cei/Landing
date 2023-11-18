@@ -1,14 +1,13 @@
 import "./Experiences.css";
 import symbol from "../../assets/experiences.svg"
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import pdf from "../../../public/Cei Alessandro CV ENG.pdf"
+import Education from "./components/Education";
+import AdaStudent from "./components/AdaStudent";
+import Pier from "./components/Pier";
 
-const experiences:string[] = [
-    "Barefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot CollegeBarefoot College",
-    "Apple Developer AcademyApple Developer AcademyApple Developer AcademyApple Developer AcademyApple Developer Academy",
-    "Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education Education"
-]
+const experiences:ReactElement[] = [<Education/>, <AdaStudent/>, <Pier/>];
 
 export default function Experiences() {
 
@@ -39,7 +38,7 @@ export default function Experiences() {
                         color: category == 0 ? "#1F1F23" : "#B9F08D",
                         backgroundColor: category == 0 ? "#B9F08D" : "#1F1F23"
                     }} onClick={() => setCategory(0)}>
-                        Barefoot College
+                        Education
                     </button>
                     <button style={{
                         color: category == 1 ? "#1F1F23" : "#B9F08D",
@@ -51,15 +50,12 @@ export default function Experiences() {
                         color: category == 2 ? "#1F1F23" : "#B9F08D",
                         backgroundColor: category == 2 ? "#B9F08D" : "#1F1F23"
                     }} onClick={() => setCategory(2)}>
-                        Education
+                        Barefoot College
                     </button>
                 </nav>
-                <h4>
-                    {experiences[category]}
-                </h4>
+                {experiences[category]}
             </div>
         </div>
-        
-    )
+    );
 
 }

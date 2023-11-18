@@ -25,7 +25,7 @@ export default function Sauce() {
                     a spoonful of deep researches and commitment.
                     <br/>
                     <br/>
-                    So, what is my secret sauce? <span style={{color: "#6CE0FF", fontWeight: "bold", textDecoration: "underline"}}>Helping human beings.</span>
+                    So, what is my secret sauce? <span style={{color: "#6CE0FF", fontWeight: "bold"}}>Helping human beings.</span>
                 </h4>
             </div>
             <div className="sauce__image">
