@@ -10,7 +10,8 @@
     grid-template-columns: 10% 89%;
     gap: 1%;
     width: 90vw;
-    height: 50vh;
+    height: auto;
+    margin-bottom: 7vh;
 }
 .projects__symbol {
     width: 100%;
