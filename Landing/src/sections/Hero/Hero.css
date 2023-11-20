@@ -1,26 +1,64 @@
   .hero__container {
-    display: flex;
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    display: flex;
+    position: relative;
   }
-  
   .hero__right-side {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: 100vh;
+    object-fit: contain;
+    overflow: hidden;
+    bottom: 0;
+    left: 48%;
+  }
+  .hero__left-side {
+    position: absolute;
+    left: 10vw;
     width: 70%;
     height: 100%;
-    object-fit: contain;
-    align-self: baseline;
-    object-position: bottom;
-    margin: auto;
-  }
-  
-  .hero__left-side {
-    width: 100%;
-    height: 70%;
     display: flex;
-    margin: 0;
-    align-self: center;
     flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    z-index: 2;
   }
+  .hero__left-side > *:nth-child(2) {
+    height: 25vh;
+    width: 40%;
+  }
+  .hero__logo-container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: left;
+  }
+  .hero__logo-icon {
+    width: 13%;
+  }
+  .hero__logo-logotype {
+    margin-left: 1%;
+    opacity: 60%;
+  }
+  .hero__logo-logotype > h1{
+    font-family: "Kit Rounded";
+    font-size: 3vw;
+  }
+  .hero__logo-logotype > h3{
+    font-family: "Auger Mono";
+    font-size: 1.5vw;
+  }
+  .hero__logo-logotype * {
+    color: #E2E2E2;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }   
   .chevron {
     cursor: pointer;
     height: 3vw;
@@ -45,40 +83,46 @@
     transition: linear;
     transition-duration: 0.3s;
   }
-
   
   @media(max-width:576px){
-    .hero__container {
-      width: 100%;
-      flex-direction: column;
-      height: 100vh;
-    }
     .hero__left-side {
+      gap: 5vh;
       position: absolute;
-      z-index: 2;
-      height: auto;
-      top: 25vw;
       width: 100%;
-      overflow: hidden;
+      bottom: 15vh;
+      left: 15vw;
     }
     .hero__left-side > *:nth-child(2) {
       height: 15vh;
-      margin-top: 10vw;
-      margin-left: 15vw;
+      width: 50%;
     }
-    .hero__left-side > *:nth-child(3) {
-      margin-left: 15vw;
+    .hero__left-side > *:nth-child(1) {
+      position: relative;
+      right: 15%;
     }
     .hero__right-side {
+      position: absolute;
       z-index: 1;
-      overflow: hidden;
-      align-self: center;
-      margin-left: 30%;
-      height: 100vh;
-      width: 100%;
+      width: 100vw;
+      height: auto;
+      bottom: 0;
+      left: 30%;
     }
     .chevron {
       width: 8vw;
       height: 8vw;
     }
+    .hero__logo-container {
+      justify-content: center;
+    }
+    .hero__logo-icon {
+        width: 20%;
+    }
+    .hero__logo-logotype > h1{
+        font-size: 1.5rem;
+    }
+    .hero__logo-logotype > h3{
+        font-size: 1rem;
+    }
   }
+

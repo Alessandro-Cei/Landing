@@ -1,5 +1,5 @@
 .oneliner__container {
-    line-height: 30px;
+    line-height: 2vw;
     width: 70%;
     height: 50%;
     text-align: left;
@@ -10,23 +10,23 @@
 .oneliner__static-text {
     font-family: "Auger Mono";
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 .oneliner__dynamic-text {
     font-family: "Auger Mono";
-    font-size: 30px;
+    font-size: 2vw;
     color: #6CE0FF;
 }
 
 .typed-cursor {
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 @media(max-width:576px){
     .oneliner__container {
         line-height: 15px;
-        width: 50%;
+        width: 55%;
     }
     .oneliner__static-text {
         font-size: 17px;

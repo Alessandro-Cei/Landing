@@ -1,6 +1,8 @@
 .experiences__container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5vh;
+
 }
 .experiences__upper-side {
     margin: 0;

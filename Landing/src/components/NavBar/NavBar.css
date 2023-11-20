@@ -23,9 +23,38 @@
     position: fixed;
     top: 0;
 }
-  
-.navbar__logo {
-   width: 25vh;
+
+.navbar__logo-container {
+    display: flex;
+    height: 50%;
+    width: 25%;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbar__logo-icon {
+    height: 130%;
+}
+
+.navbar__logo-logotype {
+    margin-left: 2%;
+}
+
+.navbar__logo-logotype > h1{
+    font-family: "Kit Rounded";
+    font-size: 1rem;
+}
+
+.navbar__logo-logotype > h3{
+    font-family: "Auger Mono";
+    font-size: 0.5rem;
+}
+
+.navbar__logo-logotype * {
+    color: #E2E2E2;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 .navbar__links * {

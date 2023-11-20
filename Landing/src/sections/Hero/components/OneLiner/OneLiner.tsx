@@ -32,7 +32,7 @@ export default function OneLiner() {
     return(
         <>
             <h1 className="oneliner__container">
-                <span className="oneliner__static-text">_Every line of code<br/>is made out of </span>
+                <span className="oneliner__static-text">_Every line of code is made out of </span>
                 <span ref={dynamicSpan} className="oneliner__dynamic-text" style={{
                   color: colors[index]
                 }}></span>
