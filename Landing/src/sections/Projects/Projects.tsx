@@ -5,12 +5,12 @@ import SkillsGrid from "./components/SkillsGrid";
 import BarefootCollege from "./components/BarefootCollege";
 import Hakulele from "./components/Hakulele";
 import symbol from "../../assets/projects.svg";
-import barefoot1 from "../../assets/barefoot1.png";
-import barefoot2 from "../../assets/barefoot2.png";
-import barefoot3 from "../../assets/barefoot3.png";
-import hakulele1 from "../../assets/hakulele1.png";
-import hakulele2 from "../../assets/hakulele2.png";
-import hakulele3 from "../../assets/hakulele3.png";
+import barefoot1 from "../../assets/barefoot1.webp";
+import barefoot2 from "../../assets/barefoot2.webp";
+import barefoot3 from "../../assets/barefoot3.webp";
+import hakulele1 from "../../assets/hakulele1.webp";
+import hakulele2 from "../../assets/hakulele2.webp";
+import hakulele3 from "../../assets/hakulele3.webp";
 
 export default function Projects () {
 

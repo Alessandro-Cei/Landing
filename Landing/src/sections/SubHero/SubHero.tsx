@@ -1,9 +1,9 @@
 import "./SubHero.css"
-import picture1 from "../../assets/subhero1.png"
-import picture2 from "../../assets/subhero2.png"
-import picture3 from "../../assets/subhero3.png"
-import picture4 from "../../assets/subhero4.png"
-import picture5 from "../../assets/subhero5.png"
+import picture1 from "../../assets/subhero1.webp"
+import picture2 from "../../assets/subhero2.webp"
+import picture3 from "../../assets/subhero3.webp"
+import picture4 from "../../assets/subhero4.webp"
+import picture5 from "../../assets/subhero5.webp"
 import { useState, useEffect } from "react"
 
 const pictures:string[] = [picture1, picture2, picture3, picture4, picture5];
