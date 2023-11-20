@@ -13,17 +13,17 @@
 }
 @font-face {
   font-family: "Kit Rounded";
-  src: url('./assets/Kit-Rounded_Semibold.otf');
+  src: url('../public/font/Kit-Rounded_Semibold.otf');
   font-display: swap;
 }
 @font-face {
   font-family: "Auger Mono";
-  src: url('./assets/Auger Mono Regular.otf');
+  src: url('../public/font/Auger\ Mono\ Regular.otf');
   font-display: swap;
 }
 @font-face {
   font-family: "Rubrik-Bold";
-  src: url('./assets/Rubrik-Bold.otf');
+  src: url('../public/font/Rubrik-Bold.otf');
   font-display: swap;
 }
 
