@@ -19,7 +19,7 @@
     font-family: "Rubrik-Bold";
 }
 .subhero__description > h3 {
-    font-family: Inter;
+    font-family: 'Inter Variable', sans-serif;
     font-weight: normal;
 }
 @media(max-width:576px){

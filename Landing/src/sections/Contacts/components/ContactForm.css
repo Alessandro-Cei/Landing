@@ -5,7 +5,7 @@ form {
     width: 50%;
     height: auto;
     gap: 6vh;
-    font-family: "Inter";
+    font-family: 'Inter Variable', sans-serif;
 }
 .form-inner-group {
     width: 100%;
@@ -21,7 +21,7 @@ input {
     outline: none;
     background-color: #1F1F23;
     border-bottom: solid 2px #FFA14F;
-    font-family: "Inter";
+    font-family: 'Inter Variable', sans-serif;
     height: 5vh;
     color: white;
 }
@@ -32,7 +32,7 @@ textarea {
     border: solid 2px #FFA14F;
     background-color: #1F1F23;
     padding: 15px;
-    font-family: "Inter";
+    font-family: 'Inter Variable', sans-serif;
     margin-top: -5vh;
     color: white;
 

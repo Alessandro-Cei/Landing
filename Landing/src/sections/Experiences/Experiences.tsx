@@ -36,19 +36,22 @@ export default function Experiences() {
                 <nav className="experiences__navbar">
                     <button style={{
                         color: category == 0 ? "#1F1F23" : "#B9F08D",
-                        backgroundColor: category == 0 ? "#B9F08D" : "#1F1F23"
+                        backgroundColor: category == 0 ? "#B9F08D" : "#1F1F23",
+                        fontFamily: "Inter Variable"
                     }} onClick={() => setCategory(0)}>
                         Education
                     </button>
                     <button style={{
                         color: category == 1 ? "#1F1F23" : "#B9F08D",
-                        backgroundColor: category == 1 ? "#B9F08D" : "#1F1F23"
+                        backgroundColor: category == 1 ? "#B9F08D" : "#1F1F23",
+                        fontFamily: "Inter Variable"
                     }} onClick={() => setCategory(1)}>
                         Apple Developer Academy
                     </button>
                     <button style={{
                         color: category == 2 ? "#1F1F23" : "#B9F08D",
-                        backgroundColor: category == 2 ? "#B9F08D" : "#1F1F23"
+                        backgroundColor: category == 2 ? "#B9F08D" : "#1F1F23",
+                        fontFamily: "Inter Variable"
                     }} onClick={() => setCategory(2)}>
                         Barefoot College
                     </button>

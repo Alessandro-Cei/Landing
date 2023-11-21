@@ -18,7 +18,7 @@
     width: 100%;
 }
 .experiences__text {
-    font-family: Inter;
+    font-family: 'Inter Variable', sans-serif;
     font-weight: normal;
     text-align: left;
     width: 90%;
@@ -44,6 +44,7 @@
     padding: 0;
     width: 90vw;
     min-height: 100vh;
+    font-family: "Inter Variable"
 }
 .experiences__navbar {
     border-bottom: solid 5px #B9F08D;

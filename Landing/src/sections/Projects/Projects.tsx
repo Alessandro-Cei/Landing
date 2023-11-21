@@ -100,13 +100,15 @@ export default function Projects () {
                 <nav className="projects__navbar">
                     <button style={{
                         color: category == 0 ? "#1F1F23" : "#CDA1FF",
-                        backgroundColor: category == 0 ? "#CDA1FF" : "#1F1F23"
+                        backgroundColor: category == 0 ? "#CDA1FF" : "#1F1F23",
+                        fontFamily: "Inter Variable"
                     }} onClick={() => changeCategory(0)}>
                         Barefoot Suite
                     </button>
                     <button style={{
                         color: category == 1 ? "#1F1F23" : "#CDA1FF",
-                        backgroundColor: category == 1 ? "#CDA1FF" : "#1F1F23"
+                        backgroundColor: category == 1 ? "#CDA1FF" : "#1F1F23",
+                        fontFamily: "Inter Variable"
                     }} onClick={() => changeCategory(1)}>
                         Hakulele
                     </button>
