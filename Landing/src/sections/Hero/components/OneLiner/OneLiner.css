@@ -53,3 +53,18 @@
         font-size: 1rem;
     }
 }
+@media (max-height: 767px) and (orientation: landscape){
+    .oneliner__container {
+        line-height: 1rem;
+        width: 55%;
+    }
+    .oneliner__static-text {
+        font-size: 1rem;
+    }
+    .oneliner__dynamic-text {
+        font-size: 1rem;
+    }
+    .typed-cursor {
+        font-size: 1rem;
+    }
+}

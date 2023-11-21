@@ -4,22 +4,27 @@ import hero from "../../assets/hero.webp";
 import chevron from "../../assets/chevron.svg";
 import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
+
 export default function Hero() {
 
     const [width, setWidth] = useState<number>(window.innerWidth);
+    const [height, setHeight] = useState<number>(window.innerHeight);
+    const isMobile = width <= 767;
+    const isLandscapeMobile = isMobile && (width > height);
+    const isToScrollLess = isMobile || isLandscapeMobile;
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
     }
+
     useEffect(() => {
         window.addEventListener('resize', handleWindowSizeChange);
         return () => {
             window.removeEventListener('resize', handleWindowSizeChange);
         }
-    }, []);
-    
-    const isMobile = width <= 576;
+    }, [])
 
     return(
         <div className="hero__container">
@@ -32,7 +37,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <OneLiner/>
-                <Link to="subhero__section" smooth={true} duration={500} offset={isMobile ? 0 : (-(window.innerHeight * 0.1))}>
+                <Link to="subhero__section" smooth={true} duration={500} offset={isToScrollLess ? 0 : (-(window.innerHeight * 0.1))}>
                     <div className="chevron">
                         <img src={chevron} alt="" />
                         <img src={chevron} alt="" />

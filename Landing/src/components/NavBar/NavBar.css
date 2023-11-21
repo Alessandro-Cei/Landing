@@ -69,7 +69,16 @@
     }
 }
 
-@media(max-width:576px){
+@media(max-width:767px){
+    .navbar {
+        display: none;
+    }
+    .navbar__placeholder {
+        display: none;
+    }
+}
+
+@media (max-height: 767px) and (orientation: landscape){
     .navbar {
         display: none;
     }
