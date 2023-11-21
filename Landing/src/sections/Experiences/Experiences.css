@@ -26,6 +26,7 @@
 .experiences__cv-button-container {
     height: 10%;
     margin-left: auto;
+    font-family: 'Inter Variable', sans-serif;
 }
 .experiences__cv-button-container > a {
     background-color: #B9F08D;
