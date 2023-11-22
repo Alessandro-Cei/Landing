@@ -45,7 +45,16 @@
    justify-content: center;
 }
 
- @media (max-width: 576px) {
+/* Handles portrait tablets */
+@media (orientation: portrait) {
+   .contacts__background {
+      display: none;
+   }
+   .contacts__container {
+      min-height: 1vh;
+   }
+}
+@media (max-width: 767px) {
    .contacts__background {
       display: none;
    }
@@ -57,10 +66,10 @@
       gap: 1%;
       width: 90vw;
       height: auto;
-  }
-  .contacts__symbol {
+   }
+   .contacts__symbol {
       width: 20%;
       position: relative;
       margin-bottom: 2vh;
-  }
- }
+   }
+}

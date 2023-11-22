@@ -89,7 +89,14 @@ textarea {
   margin: 0px 0px 0px 1.5x;  
 }
 
-@media (max-width: 576px) {
+/* Handles portrait tablets */
+@media (orientation: portrait) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
     form {
        width: 95%;
     }
