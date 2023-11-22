@@ -99,8 +99,28 @@
     height: 80vh;
     align-items: baseline;
 }
+.single-project-icon {
+    width: 10%;
+}
 
-@media (max-width: 576px) {
+/* Handles portrait tablets */
+@media (orientation: portrait) {
+    .projects__text {
+        font-size: 1.2rem;
+        margin-top: 3vh;
+    }
+    .projects__navbar {
+        font-size: 1.2rem;
+    }
+    .single-project-description {
+        font-size: 1.3rem;
+    }
+    .single-project-icon {
+        width: 20%;
+    }
+}
+
+@media (max-width: 767px) {
     .projects__container {
         margin-top: 10vh;
     }

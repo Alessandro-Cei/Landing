@@ -22,22 +22,22 @@ export default function BarefootCollege() {
                             eventually sell solar powered products. They become <span>Solar Mamas.</span>
                         </h4>
                         <div style={{display: "flex", alignItems: "center", paddingTop: "5%"}}>
-                            <img style={{width: "10vh"}} src={sakhi} alt="SakhiApp's icon"/>
-                            <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Sakhi App</h2>
+                            <img className="single-project-icon" src={sakhi} alt="SakhiApp's icon"/>
+                            <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Sakhi</h2>
                         </div>
                         <h4>
-                            <span>Sakhi App</span> is an inclusive field sales transaction and costumer 
+                            <span>Sakhi</span> is an inclusive field sales transaction and costumer 
                             management tool for Solar Mamas. This app operates in an <span>offline mode</span>, 
                             functioning even without an internet connection. However, when Solar 
                             Mamas visit a Barefoot College facility, they have the possibility to sync 
-                            their data with Dashboard App.
+                            their data with Dashboard.
                         </h4>
                         <div style={{display: "flex", alignItems: "center", paddingTop: "5%"}}>
-                            <img style={{width: "10vh"}} src={dashboard} alt="DashboardApp's icon"/>
-                            <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Dashboard App</h2>
+                            <img className="single-project-icon" src={dashboard} alt="DashboardApp's icon"/>
+                            <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Dashboard</h2>
                         </div>
                         <h4>
-                            <span>Dashboard App</span> is an internal sales management tool for Barefoot staff 
+                            <span>Dashboard</span> is an internal sales management tool for Barefoot staff 
                             and Ground Partners, people with different responsabilities inside 
                             the organization,so each of them have different versions of the app based 
                             on their tasks.
