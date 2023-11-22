@@ -68,7 +68,27 @@
       color: #555;
     }
 }
-
+/* Handles portrait tablets */
+@media (orientation: portrait) {
+    .navbar {
+        height: 8vh;
+    }
+    .navbar__placeholder {
+        height: 8vh;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar__logo-container {
+        width: 30%;
+    }
+    .navbar__logo-logotype > h1{
+        font-size: 1.2rem;
+    }
+    
+    .navbar__logo-logotype > h3{
+        font-size: 0.8rem;
+    }
+}
 @media(max-width:767px){
     .navbar {
         display: none;

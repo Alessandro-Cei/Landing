@@ -22,7 +22,18 @@
     font-family: 'Inter Variable', sans-serif;
     font-weight: normal;
 }
-@media(max-width:576px){
+
+/* Handles portrait tablets */
+@media (orientation: portrait) {
+    .subhero__description > h1 {
+        font-size: 2vh;
+    }
+    .subhero__description > h3 {
+        font-size: 1.5vh;
+    }
+}
+
+@media(max-width: 767px){
     .subhero__container {
         flex-direction: column;
     }
@@ -33,9 +44,11 @@
     }
     .subhero__description {
         width: 80%;
-        font-size: 0.8rem;
     }
     .subhero__description > h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .subhero__description > h3 {
+        font-size: 0.9rem;
     }
 }
