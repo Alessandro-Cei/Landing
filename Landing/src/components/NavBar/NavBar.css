@@ -77,12 +77,3 @@
         display: none;
     }
 }
-
-@media (max-height: 767px) and (orientation: landscape){
-    .navbar {
-        display: none;
-    }
-    .navbar__placeholder {
-        display: none;
-    }
-}
