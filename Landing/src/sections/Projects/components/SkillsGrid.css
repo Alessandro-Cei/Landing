@@ -6,14 +6,21 @@
 }
 .skills-grid__pill {
     display: inline-flex;
-    margin: 5px;
-    padding: 5px 10px;
-    border-radius: 16px;
+    margin: 0.3vw;
+    padding: 0.3vw 0.6vw;
+    border-radius: 1.2vw;
     transition: 0.5s;
     font-family: 'Inter Variable', sans-serif;
     font-weight: bold;
 }
-@media (max-width: 576px) {
+@media (orientation: portrait) {
+    .skills-grid__pill {
+      margin: 5px;
+      padding: 5px 10px;
+      border-radius: 16px;
+    }
+}
+@media (max-width: 767px) {
     .skills-grid__container {
         padding-right: 5%;
     }
