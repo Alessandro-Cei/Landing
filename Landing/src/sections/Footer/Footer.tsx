@@ -7,7 +7,7 @@ export default function Footer() {
     return(
         <footer className="footer__container">
             <div className="footer__info-wrapper">
-                <h6 style={{fontFamily: "Inter Variable", fontWeight: "normal"}}>© 2023 Alessandro Cei. All rights are reserved. Design Luisa Pinto</h6>
+                <h6>© 2023 Alessandro Cei. All rights are reserved. Design Luisa Pinto</h6>
                 <div className="footer__info-links">
                     <a href="https://www.linkedin.com/in/alessandro-cei" target="_blank"><img src={linkedin} alt="" /></a>
                     <a href="https://github.com/Alessandro-Cei" target="_blank"><img src={github} alt="" /></a>
