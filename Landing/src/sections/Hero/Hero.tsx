@@ -9,11 +9,13 @@ import logo from "../../assets/logo.svg";
 export default function Hero() {
 
     const [width, setWidth] = useState<number>(window.innerWidth);
+    const [height, setHeight] = useState<number>(window.innerHeight);
     const isMobile = width <= 767;
-    const isTablet = !(isMobile) && (window.innerHeight > window.innerWidth)
+    const isTablet = !(isMobile) && (height > width)
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
+        setHeight(window.innerHeight)
     }
 
     useEffect(() => {
@@ -36,8 +38,8 @@ export default function Hero() {
                 <OneLiner/>
                 <Link to="subhero__section" smooth={true} duration={500} offset={isMobile ? 0 : (isTablet ? -(window.innerHeight * 0.07) : -(window.innerHeight * 0.1))}>
                     <div className="chevron">
-                        <img src={chevron} alt="" />
-                        <img src={chevron} alt="" />
+                        <img src={chevron} alt="Hero section's scroll button" />
+                        <img src={chevron} alt="Hero section's scroll button" />
                     </div>
                 </Link>
             </div>

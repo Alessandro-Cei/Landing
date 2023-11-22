@@ -12,16 +12,16 @@ export default function Contacts() {
         <>
             <div className="contacts__background">
                 <div>
-                    <img src={baloon1} alt=""  style={{
+                    <img src={baloon1} alt="Contacts section's background decoration"  style={{
                         marginRight: "15%",
                         width: "50%"
                     }}/>
                 </div>
                 <div>
-                    <img src={baloon2} alt="" style={{
+                    <img src={baloon2} alt="Contacts section's background decoration" style={{
                         marginLeft: "40%",
                     }}/>
-                    <img src={doodle} alt="" style={{
+                    <img src={doodle} alt="Contacts section's background decoration" style={{
                         filter: "invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg) brightness(119%) contrast(104%)",
                         opacity: "0.15",
                         marginLeft: "40%"
