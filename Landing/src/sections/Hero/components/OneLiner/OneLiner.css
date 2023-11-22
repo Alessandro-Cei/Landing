@@ -23,18 +23,18 @@
     font-size: 2vw;
 }
 
-@media (min-width: 768px) and (max-width: 991px){
+@media (orientation: portrait) {
     .oneliner__container {
-        line-height: 1.5rem;
+        line-height: 3.5vw;
     }
     .oneliner__static-text {
-        font-size: 1.5rem;
+        font-size: 3.5vw;
     }
     .oneliner__dynamic-text {
-        font-size: 1.5rem;
+        font-size: 3.5vw;
     }
     .typed-cursor {
-        font-size: 1.5rem;
+        font-size: 3.5vw;
     }
 }
 

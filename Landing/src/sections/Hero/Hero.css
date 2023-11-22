@@ -84,8 +84,8 @@
     transition-duration: 0.3s;
   }
 
-    /* Tablet (768px - 991px) */
-  @media (min-width: 768px) and (max-width: 991px) {
+  /* Handles portrait tablets */
+  @media (orientation: portrait) {
     .hero__left-side {
       gap: 5vh;
       position: absolute;
@@ -96,7 +96,7 @@
     }
     .hero__left-side > *:nth-child(2) {
       height: 18%;
-      width: 40%;
+      width: 45%;
     }
     .hero__right-side {
       position: absolute;
@@ -117,14 +117,13 @@
         width: 20%;
     }
     .hero__logo-logotype > h1{
-        font-size: 4rem;
+        font-size: 8vw;
     }
     .hero__logo-logotype > h3{
-        font-size: 2rem;
+        font-size: 4vw;
     }
   }
 
-  /* Mobile (≤ 767px) */
   @media (max-width: 767px) {
     .hero__left-side {
       gap: 5vh;
