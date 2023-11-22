@@ -14,11 +14,11 @@
     font-family: "Auger Mono";
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
     .section-title__container > h1 {
         font-size: 2rem;
     }
     .section-title__container > h3 {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }

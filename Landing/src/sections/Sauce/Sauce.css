@@ -5,7 +5,8 @@
     grid-template-columns: 10% 44% 44%;
     gap: 1%;
     width: 90vw;
-    height: 100vh;
+    height: auto;
+    margin-bottom: 10vh;
 }
 .sauce__symbol {
    width: 100%;
@@ -21,13 +22,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 5vh;
 }
 .sauce__image > img {
     width: 20vw;
 }
 
-@media (max-width: 576px) {
+/* Handles portrait tablets */
+@media (orientation: portrait) {
+    .sauce__text {
+        font-size: 1.2rem;
+        margin-top: 3vh;
+    }
+}
+
+@media (max-width: 767px) {
     .sauce__container {
         margin: 0;
         padding: 0;
@@ -43,10 +53,15 @@
         margin-bottom: 2vh;
      }
     .sauce__image {
+        margin-top: 5vh;
         flex-direction: row;
         justify-content: center;       
     }
     .sauce__image img:nth-child(2) {
         width: 40vw;
+    }
+    .sauce__text {
+        font-size: 1rem;
+        margin-top: 3vh;
     }
 }
