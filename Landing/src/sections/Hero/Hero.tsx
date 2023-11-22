@@ -10,6 +10,7 @@ export default function Hero() {
 
     const [width, setWidth] = useState<number>(window.innerWidth);
     const isMobile = width <= 767;
+    const isTablet = !(isMobile) && (window.innerHeight > window.innerWidth)
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -33,7 +34,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <OneLiner/>
-                <Link to="subhero__section" smooth={true} duration={500} offset={isMobile ? 0 : (-(window.innerHeight * 0.1))}>
+                <Link to="subhero__section" smooth={true} duration={500} offset={isMobile ? 0 : (isTablet ? -(window.innerHeight * 0.07) : -(window.innerHeight * 0.1))}>
                     <div className="chevron">
                         <img src={chevron} alt="" />
                         <img src={chevron} alt="" />
