@@ -11,11 +11,11 @@ export default function Hero() {
     const [width, setWidth] = useState<number>(window.innerWidth);
     const [height, setHeight] = useState<number>(window.innerHeight);
     const isMobile = width <= 767;
-    const isTablet = !(isMobile) && (height > width)
+    const isTablet = !(isMobile) && (height > width);
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
-        setHeight(window.innerHeight)
+        setHeight(window.innerHeight);
     }
 
     useEffect(() => {
