@@ -2,7 +2,6 @@ import "./ContactForm.css";
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha"
-import { env } from "process";
 
 export default function ContactForm() {
 
@@ -43,10 +42,7 @@ export default function ContactForm() {
     setToken(value)
   }
     useEffect(() => {
-        console.log(env.REACT_APP_SERVICE_ID)
-        console.log(env.REACT_APP_TEMPLATE_ID)
-        console.log(env.REACT_APP_PUBLIC_KEY)
-        console.log(env.REACT_APP_PUBLIC_KEY)
+        console.log(import.meta.env.REACT_APP_SERVICE_ID)
     }, [])
   return (
     <form ref={form} onSubmit={sendEmail}>
