@@ -19,8 +19,12 @@ export default function ContactForm() {
         'message': form.current.message.value,
         'g-recaptcha-response': token
     }
+    const service:string = process.env["SERVICE_ID"] ?? ""
+    const template:string = process.env["TEMPLATE_ID"] ?? ""
+    const key:string = process.env["PUBLIC_KEY"] ?? ""
 
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', params, 'PUBLIC_KEY')
+    /*emailjs.send('SERVICE_ID', 'TEMPLATE_ID', params, 'PUBLIC_KEY')*/
+    emailjs.send(service, template, params, key)
       .then((result) => {
           console.log(result.text);
           captcha.current.reset()
