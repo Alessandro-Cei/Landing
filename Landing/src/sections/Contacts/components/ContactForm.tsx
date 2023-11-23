@@ -7,11 +7,11 @@ export default function ContactForm() {
 
   const form:any = useRef();
   const captcha:any = useRef();
-  const site:string = import.meta.env.REACT_APP_SITE_KEY ?? "SITE_KEY";
+  const site:string = import.meta.env.VITE_SITE_KEY ?? "SITE_KEY";
   const [token, setToken] = useState();
-  const service:string = import.meta.env.REACT_APP_SERVICE_ID ?? "SERVICE_ID";
-  const template:string = import.meta.env.REACT_APP_TEMPLATE_ID ?? "TEMPLATE_ID";
-  const key:string = import.meta.env.REACT_APP_PUBLIC_KEY ?? "PUBLIC_KEY";
+  const service:string = import.meta.env.VITE_SERVICE_ID ?? "SERVICE_ID";
+  const template:string = import.meta.env.VITE_TEMPLATE_ID ?? "TEMPLATE_ID";
+  const key:string = import.meta.env.VITE_PUBLIC_KEY ?? "PUBLIC_KEY";
 
   const sendEmail = (e:any) => {
     e.preventDefault();
