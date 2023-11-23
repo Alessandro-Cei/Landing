@@ -2,16 +2,17 @@ import "./ContactForm.css";
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha"
+import { env } from "process";
 
 export default function ContactForm() {
 
   const form:any = useRef();
   const captcha:any = useRef();
-  const site:string = "SITE_KEY"
+  /*const site:string = "SITE_KEY"*/
   const [token, setToken] = useState()
-  const service:string = process.env.SERVICE_ID ?? ""
-    const template:string = process.env.TEMPLATE_ID ?? ""
-    const key:string = process.env.PUBLIC_KEY ?? ""
+  /*const service:string = env.SERVICE_ID ?? ""
+  const template:string = env.TEMPLATE_ID ?? ""
+  const key:string = env.PUBLIC_KEY ?? ""*/
 
   const sendEmail = (e:any) => {
     e.preventDefault();
@@ -25,8 +26,7 @@ export default function ContactForm() {
     }
     
 
-    /*emailjs.send('SERVICE_ID', 'TEMPLATE_ID', params, 'PUBLIC_KEY')*/
-    emailjs.send(service, template, params, key)
+    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', params, 'PUBLIC_KEY')
       .then((result) => {
           console.log(result.text);
           captcha.current.reset()
@@ -43,9 +43,9 @@ export default function ContactForm() {
     setToken(value)
   }
     useEffect(() => {
-        console.log(service)
-        console.log(template)
-        console.log(key)
+        console.log(env.SERVICE_ID)
+        console.log(env.TEMPLATE_ID)
+        console.log(env.PUBLIC_KEY)
     }, [])
   return (
     <form ref={form} onSubmit={sendEmail}>
@@ -61,7 +61,7 @@ export default function ContactForm() {
         <label style={{marginLeft: "2px", color: "#747474"}}>Message</label>
         <textarea name="message"/>
         <div className="submit-group">
-            <ReCAPTCHA sitekey={site} ref={captcha} size="normal" theme="dark" className="recaptcha" onChange={
+            <ReCAPTCHA sitekey="SITE_KEY" ref={captcha} size="normal" theme="dark" className="recaptcha" onChange={
                 onChange
             }/>
             {token != undefined ? <button type="submit" className="submit-button">Send</button> : <button disabled type="submit" className="submit-button">Send</button>}
