@@ -43,9 +43,10 @@ export default function ContactForm() {
     setToken(value)
   }
     useEffect(() => {
-        console.log(env.SERVICE_ID)
-        console.log(env.TEMPLATE_ID)
-        console.log(env.PUBLIC_KEY)
+        console.log(env.REACT_APP_SERVICE_ID)
+        console.log(env.REACT_APP_TEMPLATE_ID)
+        console.log(env.REACT_APP_PUBLIC_KEY)
+        console.log(env.REACT_APP_PUBLIC_KEY)
     }, [])
   return (
     <form ref={form} onSubmit={sendEmail}>
