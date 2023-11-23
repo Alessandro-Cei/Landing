@@ -1,5 +1,5 @@
 import "./ContactForm.css";
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -7,11 +7,11 @@ export default function ContactForm() {
 
   const form:any = useRef();
   const captcha:any = useRef();
-  /*const site:string = "SITE_KEY"*/
-  const [token, setToken] = useState()
-  /*const service:string = env.SERVICE_ID ?? ""
-  const template:string = env.TEMPLATE_ID ?? ""
-  const key:string = env.PUBLIC_KEY ?? ""*/
+  const site:string = import.meta.env.REACT_APP_SITE_KEY ?? "SITE_KEY";
+  const [token, setToken] = useState();
+  const service:string = import.meta.env.REACT_APP_SERVICE_ID ?? "SERVICE_ID";
+  const template:string = import.meta.env.REACT_APP_TEMPLATE_ID ?? "TEMPLATE_ID";
+  const key:string = import.meta.env.REACT_APP_PUBLIC_KEY ?? "PUBLIC_KEY";
 
   const sendEmail = (e:any) => {
     e.preventDefault();
@@ -22,10 +22,9 @@ export default function ContactForm() {
         'topic': form.current.topic.value,
         'message': form.current.message.value,
         'g-recaptcha-response': token
-    }
-    
+    };
 
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', params, 'PUBLIC_KEY')
+    emailjs.send(service, template, params, key)
       .then((result) => {
           console.log(result.text);
           captcha.current.reset()
@@ -39,11 +38,9 @@ export default function ContactForm() {
   };
 
   function onChange(value: any) {
-    setToken(value)
-  }
-    useEffect(() => {
-        console.log(import.meta.env.REACT_APP_SERVICE_ID)
-    }, [])
+    setToken(value);
+  };
+
   return (
     <form ref={form} onSubmit={sendEmail}>
         <div className="form-inner-group-container">
@@ -58,7 +55,7 @@ export default function ContactForm() {
         <label style={{marginLeft: "2px", color: "#747474"}}>Message</label>
         <textarea name="message"/>
         <div className="submit-group">
-            <ReCAPTCHA sitekey="SITE_KEY" ref={captcha} size="normal" theme="dark" className="recaptcha" onChange={
+            <ReCAPTCHA sitekey={site} ref={captcha} size="normal" theme="dark" className="recaptcha" onChange={
                 onChange
             }/>
             {token != undefined ? <button type="submit" className="submit-button">Send</button> : <button disabled type="submit" className="submit-button">Send</button>}
