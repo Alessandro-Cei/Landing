@@ -13,7 +13,7 @@ export default function BarefootCollege() {
                             <br/>
                             Barefoot College is an <span>Indian-based NGO</span> that operates in the poorest 
                             countries of the world where marginalized women face problems as 
-                            <span>limited education,economic hardships gender inequality and limited 
+                            <span>limited education, economic hardships, gender inequality and limited 
                             access to electricity.</span>
                             <br/>
                             <br/>
@@ -26,7 +26,7 @@ export default function BarefootCollege() {
                             <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Sakhi</h2>
                         </div>
                         <h4>
-                            <span>Sakhi</span> is an inclusive field sales transaction and costumer 
+                            <span>Sakhi</span> is an inclusive field sales transaction and customer 
                             management tool for Solar Mamas. This app operates in an <span>offline mode</span>, 
                             functioning even without an internet connection. However, when Solar 
                             Mamas visit a Barefoot College facility, they have the possibility to sync 
@@ -38,8 +38,8 @@ export default function BarefootCollege() {
                         </div>
                         <h4>
                             <span>Dashboard</span> is an internal sales management tool for Barefoot staff 
-                            and Ground Partners, people with different responsabilities inside 
-                            the organization,so each of them have different versions of the app based 
+                            and Ground Partners, people with different responsibilities inside 
+                            the organization, so each of them have different versions of the app based 
                             on their tasks.
                         </h4>
                         <div className="footer__info-links" style={{

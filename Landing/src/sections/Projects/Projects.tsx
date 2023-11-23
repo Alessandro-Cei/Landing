@@ -117,14 +117,14 @@ export default function Projects () {
                     {category == 0 ? <BarefootCollege/> : <Hakulele/>}
                     <div className="single-project-visuals">
                         <SkillsGrid skills={
-                            category == 0 ? ["SwiftUI", "VoiceOver", "iOS", "TestFlight", "UIKit", 
-                                            "iPadOS", "On Site Usability Testing", "Accessibility", 
-                                            "DocC", "FileMaker", "APIs", "AVFoundation", "CoreData", 
+                            category == 0 ? ["UIKit", "VoiceOver", "iOS", "iPadOS", "SwiftUI", 
+                                            "On Site Usability Testing", "Accessibility", 
+                                            "FileMaker", "APIs", "Completion Handlers", "Async/Await", "CoreData", 
                                             "Animations"] 
                                             :
                                             ["SwiftUI", "App Store Connect", "TestFlight", "JSONDecoder",
-                                             "iPadOS", "AVFoundation", "Haptic Feedback",
-                                              "On Site Usability Testing", "Animations", "iOS", "Native Components"]
+                                             "iPadOS", "AVFoundation", "AudioKit", "Haptic Feedback", "iOS", "HIG",
+                                              "On Site Usability Testing", "Animations"]
                         }/>
                         <div className="single-project-images">
                             {loadedPictures == true ?

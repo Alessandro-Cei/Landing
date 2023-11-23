@@ -11,27 +11,27 @@ export default function Hakulele() {
                             <h2 style={{color: "#CDA1FF", fontFamily: "Rubrik-Bold", paddingLeft: "3%"}}>Hakulele</h2>
                         </div>
                         <h4>
-                            It is an useful tool for every beginner at playing the ukulele. The app was 
+                            A useful tool for every beginner at playing the ukulele. This app was 
                             developed starting from an <span>actual personal struggle</span>: the chords are a lot 
-                            and it is <span>very easy to get lost</span> among them (especially if you don’t have a 
-                            music theory knowledge). Then, all the useful things are dislocated in 
+                            and it's <span>very easy to get lost</span> among them (especially if you don’t have a 
+                            music theory knowledge). Also, all the useful notions are dislocated in 
                             different places, websites and apps. 
                             <br/>
                             <br/>
-                            Hakulele has everything a new ukulele musician needs for starting playing 
-                            the Hawaiian instrument. 
+                            Hakulele has everything a new ukulele musician needs to start playing 
+                            this Hawaiian instrument. 
                             <br/>
                             <br/>
                             <span style={{fontWeight: "bold", fontSize: "x-large"}}>The Tuner</span>
                             <br/>
                             The main feature is the ukulele tuner. The user can choose between a 
-                            <span> static or a dynamic one.</span> With the static, you can listen to the right pitch 
+                            <span> static or a dynamic one.</span> With the static one, you can listen to the right pitch 
                             of every chord and train your ears. 
                             <br/>
                             <br/>
-                            Otherwise, the dynamic tuner <span>actively listens</span> to what you are playing, 
+                            Otherwise, the dynamic tuner <span>actively listens</span> to what you're playing, 
                             recognizing the played chord and informing you about the state of its 
-                            tuning. The <span>visual representation of the headstock</span> helps you to find the 
+                            tuning. The <span>visual representation of the headstock</span> helps you find the 
                             right tuner key.
                             <br/>
                             <br/>
@@ -45,8 +45,8 @@ export default function Hakulele() {
                             <br/>
                             <span style={{fontWeight: "bold", fontSize: "x-large"}}>App Localizations</span>
                             <br/>
-                            Hakulele is available worldwide and is currently localized in 13 countries: USA, Great Britain, 
-                            Italy, Spain, Portugal, Poland, France, Germany, Brazil, Australia, Japan, Canada, Mexico.
+                            Hakulele is available worldwide and is currently localized in 8 languages: English, Italian,
+                            Spanish, Portuguese, Polish, French, German, and Japanese, with many more coming soon.
                             <div className="footer__info-links" style={{
                                 marginTop: "2vh",
                             }}>
