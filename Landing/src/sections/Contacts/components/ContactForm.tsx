@@ -1,5 +1,5 @@
 import "./ContactForm.css";
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -7,8 +7,11 @@ export default function ContactForm() {
 
   const form:any = useRef();
   const captcha:any = useRef();
-  const site:string = process.env["SITE_KEY"] ?? ""
+  const site:string = "SITE_KEY"
   const [token, setToken] = useState()
+  const service:string = process.env.SERVICE_ID ?? ""
+    const template:string = process.env.TEMPLATE_ID ?? ""
+    const key:string = process.env.PUBLIC_KEY ?? ""
 
   const sendEmail = (e:any) => {
     e.preventDefault();
@@ -20,9 +23,7 @@ export default function ContactForm() {
         'message': form.current.message.value,
         'g-recaptcha-response': token
     }
-    const service:string = process.env["SERVICE_ID"] ?? ""
-    const template:string = process.env["TEMPLATE_ID"] ?? ""
-    const key:string = process.env["PUBLIC_KEY"] ?? ""
+    
 
     /*emailjs.send('SERVICE_ID', 'TEMPLATE_ID', params, 'PUBLIC_KEY')*/
     emailjs.send(service, template, params, key)
@@ -41,7 +42,11 @@ export default function ContactForm() {
   function onChange(value: any) {
     setToken(value)
   }
-
+    useEffect(() => {
+        console.log(service)
+        console.log(template)
+        console.log(key)
+    }, [])
   return (
     <form ref={form} onSubmit={sendEmail}>
         <div className="form-inner-group-container">
