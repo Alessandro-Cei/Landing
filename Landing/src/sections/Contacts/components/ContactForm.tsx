@@ -7,6 +7,7 @@ export default function ContactForm() {
 
   const form:any = useRef();
   const captcha:any = useRef();
+  const site:string = process.env["SITE_KEY"] ?? ""
   const [token, setToken] = useState()
 
   const sendEmail = (e:any) => {
@@ -55,7 +56,7 @@ export default function ContactForm() {
         <label style={{marginLeft: "2px", color: "#747474"}}>Message</label>
         <textarea name="message"/>
         <div className="submit-group">
-            <ReCAPTCHA sitekey="SITE_KEY" ref={captcha} size="normal" theme="dark" className="recaptcha" onChange={
+            <ReCAPTCHA sitekey={site} ref={captcha} size="normal" theme="dark" className="recaptcha" onChange={
                 onChange
             }/>
             {token != undefined ? <button type="submit" className="submit-button">Send</button> : <button disabled type="submit" className="submit-button">Send</button>}
