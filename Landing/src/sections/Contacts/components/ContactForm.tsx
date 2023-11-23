@@ -8,14 +8,15 @@ export default function ContactForm() {
   const form:any = useRef();
   const captcha:any = useRef();
   const site:string = import.meta.env.VITE_SITE_KEY ?? "SITE_KEY";
-  const [token, setToken] = useState();
   const service:string = import.meta.env.VITE_SERVICE_ID ?? "SERVICE_ID";
   const template:string = import.meta.env.VITE_TEMPLATE_ID ?? "TEMPLATE_ID";
   const key:string = import.meta.env.VITE_PUBLIC_KEY ?? "PUBLIC_KEY";
+  const [token, setToken] = useState();
+  const [isGivingFeedback, setIsGivingFeedback] = useState(false);
+  const [feedback, setFeedback] = useState("There was an error sending your email, please try again later.");
 
   const sendEmail = (e:any) => {
     e.preventDefault();
-
     const params = {
         'name': form.current.name.value,
         'email': form.current.email.value,
@@ -23,17 +24,26 @@ export default function ContactForm() {
         'message': form.current.message.value,
         'g-recaptcha-response': token
     };
-
     emailjs.send(service, template, params, key)
       .then((result) => {
           console.log(result.text);
-          captcha.current.reset()
-          form.current.reset()
-          setToken(undefined)
+          captcha.current.reset();
+          form.current.reset();
+          setToken(undefined);
+          setFeedback("Thank you for contacting me!");
+          setIsGivingFeedback(true);
+          setTimeout(() => {
+            setIsGivingFeedback(false);
+          }, 3000);
       }, (error) => {
           console.log(error.text);
-          captcha.current.reset()
-          setToken(undefined)
+          captcha.current.reset();
+          setToken(undefined);
+          setFeedback("There was an error sending your email, please try again later.");
+          setIsGivingFeedback(true);
+          setTimeout(() => {
+            setIsGivingFeedback(false);
+          }, 3000);
       });
   };
 
@@ -59,6 +69,12 @@ export default function ContactForm() {
                 onChange
             }/>
             {token != undefined ? <button type="submit" className="submit-button">Send</button> : <button disabled type="submit" className="submit-button">Send</button>}
+        </div>
+        <div className="feedback-container" style={{
+            opacity: isGivingFeedback ? "100%" : "0%",
+            transition: 'opacity 0.5s ease-in-out'
+        }}>
+            <h4>{feedback}</h4>
         </div>
     </form>
   )

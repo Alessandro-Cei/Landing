@@ -89,10 +89,56 @@ textarea {
   margin: 0px 0px 0px 1.5x;  
 }
 
+.feedback-container {
+    position: absolute;
+    z-index: 2;
+    width: 20%;
+    height: 12%;
+    margin: auto;
+    left: 0;
+    right: 0; 
+    top: 0;
+    bottom: 0; 
+    background-color: #1F1F23;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFA14F;
+    font-size: 1vw;
+    border: solid 2px #FFA14F;
+    font-family: "Rubrik-Bold";
+    text-align: center;
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-container > button {
+    position: absolute;
+    padding: 10px 15px;
+    color: #FFA14F;
+    border-radius: 16px;
+    background-color: transparent;
+    right: 0;
+    top: 0;
+    border-style: solid;
+
+    &:hover {
+        border: none;
+        color: white;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+    }
+}
+
 /* Handles portrait tablets */
 @media (orientation: portrait) {
     form {
         width: 80%;
+    }
+    .feedback-container {
+        width: 40%;
+        height: 16%;
+        font-size: 2vw;       
     }
 }
 
@@ -106,5 +152,10 @@ textarea {
         align-items: center;
         gap: 3vh;
         margin-top: -3vh;
+    }
+    .feedback-container {
+        width: 70%;
+        height: 12%;
+        font-size: 3.5vw;
     }
 }
