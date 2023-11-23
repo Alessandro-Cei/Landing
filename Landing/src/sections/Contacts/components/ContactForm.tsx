@@ -60,7 +60,6 @@ export default function ContactForm() {
             }/>
             {token != undefined ? <button type="submit" className="submit-button">Send</button> : <button disabled type="submit" className="submit-button">Send</button>}
         </div>
-        {token}
     </form>
   )
 
