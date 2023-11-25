@@ -1,4 +1,6 @@
 import logo from "../../../assets/logo.svg"
+import github from "../../../assets/github.svg"
+
 
 export default function Alessandrocei() {
     return(
@@ -32,6 +34,9 @@ export default function Alessandrocei() {
                 learn and how programming is something cross-cutting, going beyond knowledge of individual frameworks, 
                 as <span>many concepts are shared at the core of them</span>.
             </h4>
+            <div className="footer__info-links" style={{marginTop: "2vh",}}>
+                <a href="https://github.com/Alessandro-Cei/Landing" target="_blank"><img src={github} alt="Project's Behance page" style={{paddingLeft: "0px"}}/></a>
+            </div>
         </div>
     )
 }
