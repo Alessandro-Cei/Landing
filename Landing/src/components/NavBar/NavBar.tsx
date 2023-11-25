@@ -42,7 +42,7 @@ export default function NavBar() {
             <img className="navbar__logo-icon" src={logo} alt="The logo's icon"/>
             <div className="navbar__logo-logotype">
                 <h1>Alessandro Cei</h1>
-                <h3>iOS Developer</h3>
+                <h3>Mobile Developer</h3>
             </div>
         </div>
         <div className="navbar__links">

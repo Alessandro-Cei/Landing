@@ -56,7 +56,7 @@ export default function SubHero() {
                 <div style={{width: "50%"}}></div>
             }
             <div className="subhero__description">
-                <h1>iOS Development at its human finest</h1>
+                <h1>Mobile Development at its human finest</h1>
                 <h3>
                 It is not just a matter of writing code: software solutions are our way to improve life and processes, tools for people. 
                 <br/>

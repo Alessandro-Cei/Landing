@@ -32,7 +32,7 @@ export default function Hero() {
                     <img className="hero__logo-icon" src={logo} alt="The logo's icon"/>
                     <div className="hero__logo-logotype">
                         <h1>Alessandro Cei</h1>
-                        <h3>iOS Developer</h3>
+                        <h3>Mobile Developer</h3>
                     </div>
                 </div>
                 <OneLiner/>

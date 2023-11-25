@@ -1,9 +1,10 @@
 import "./Projects.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, ReactElement } from "react";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import SkillsGrid from "./components/SkillsGrid";
 import BarefootCollege from "./components/BarefootCollege";
 import Hakulele from "./components/Hakulele";
+import Alessandrocei from "./components/Alessandrocei";
 import symbol from "../../assets/projects.svg";
 import barefoot1 from "../../assets/barefoot1.webp";
 import barefoot2 from "../../assets/barefoot2.webp";
@@ -11,11 +12,20 @@ import barefoot3 from "../../assets/barefoot3.webp";
 import hakulele1 from "../../assets/hakulele1.webp";
 import hakulele2 from "../../assets/hakulele2.webp";
 import hakulele3 from "../../assets/hakulele3.webp";
+import alecei1 from "../../assets/alecei1.webp";
+import alecei2 from "../../assets/alecei2.webp";
+import alecei3 from "../../assets/alecei3.webp";
 
 export default function Projects () {
 
-    const pictures:string[][] = [[barefoot1, barefoot2, barefoot3],[hakulele1, hakulele2, hakulele3]]
-    const [category, setCategory] = useState<number | null>(null);
+    const projects:ReactElement[] = [<BarefootCollege/>, <Hakulele/>, <Alessandrocei/>];
+    const skills:string[][] = [
+        ["UIKit", "VoiceOver", "iOS", "iPadOS", "SwiftUI", "On Site Usability Testing", "Accessibility", "FileMaker", "APIs", "Completion Handlers", "Async/Await", "CoreData", "Animations"],
+        ["SwiftUI", "App Store Connect", "TestFlight", "JSONDecoder", "iPadOS", "AVFoundation", "AudioKit", "Haptic Feedback", "iOS", "HIG", "On Site Usability Testing", "Animations"],
+        ["Web Development", "React", "Vite", "Typescript", "Responsive", "Vercel", "Deployment", "Email.js", "Environment", "Animations", "Hooks", "Libraries"]
+    ];
+    const pictures:string[][] = [[barefoot1, barefoot2, barefoot3], [hakulele1, hakulele2, hakulele3], [alecei1, alecei2, alecei3]];
+    const [projectIndex, setProjectIndex] = useState<number | null>(null);
     const [pictureIndex, setPictureIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
     const [loadedPictures, setLoadedPictures] = useState(false)
@@ -30,7 +40,7 @@ export default function Projects () {
       const intervalId = setInterval(() => {
         setFadeOut(true);
         setTimeout(() => {
-          const newIndex = (pictureIndex + 1) % pictures[category ?? 0].length;
+          const newIndex = (pictureIndex + 1) % pictures[projectIndex ?? 0].length;
           setPictureIndex(newIndex);
           setFadeOut(false);
         }, 500); 
@@ -39,16 +49,16 @@ export default function Projects () {
     }, [pictureIndex, pictures]);
     
     useEffect(() => {
-        if (category == null) {
-            setCategory(0)
+        if (projectIndex == null) {
+            setProjectIndex(0)
         } else {
             loadPictures()
         }
-    }, [category]);
+    }, [projectIndex]);
 
 
     function loadPictures() {
-        let promises: Promise<void>[] = pictures[category ?? 0].map(e => picturePromise(e))
+        let promises: Promise<void>[] = pictures[projectIndex ?? 0].map(e => picturePromise(e))
         Promise.all(promises).then(() => setLoadedPictures(true));
     }
     
@@ -61,21 +71,33 @@ export default function Projects () {
     }
     
     function changeCategory(num: number) {
-        setCategory(num)
+        setProjectIndex(num)
         setPictureIndex(0)
-        if (num == 0) {
-            setPicturesStyles([
-                { maxWidth: 'auto', maxHeight: '100%'},
-                { maxWidth: '100%', maxHeight: 'auto'},
-                { maxWidth: '100%', maxHeight: 'auto'}
-            ])
-        } else {
-            setPicturesStyles([
-                { maxWidth: 'auto', maxHeight: '100%'},
-                { maxWidth: 'auto', maxHeight: '100%'},
-                { maxWidth: 'auto', maxHeight: '100%'}
-            ])
-        }
+        switch(num) { 
+            case 1: { 
+                setPicturesStyles([
+                    { maxWidth: 'auto', maxHeight: '100%'},
+                    { maxWidth: 'auto', maxHeight: '100%'},
+                    { maxWidth: 'auto', maxHeight: '100%'}
+                ]) 
+                break;
+            } 
+            case 2: { 
+                setPicturesStyles([
+                    { maxWidth: '100%', maxHeight: 'auto'},
+                    { maxWidth: 'auto', maxHeight: '100%'},
+                    { maxWidth: 'auto', maxHeight: '100%'}
+                ])
+                break;
+            } 
+            default: { 
+                setPicturesStyles([
+                    { maxWidth: 'auto', maxHeight: '100%'},
+                    { maxWidth: '100%', maxHeight: 'auto'},
+                    { maxWidth: '100%', maxHeight: 'auto'}
+                ]) 
+            } 
+        } 
     };
 
     return(
@@ -99,37 +121,35 @@ export default function Projects () {
             <div className="projects__lower-side">
                 <nav className="projects__navbar">
                     <button style={{
-                        color: category == 0 ? "#1F1F23" : "#CDA1FF",
-                        backgroundColor: category == 0 ? "#CDA1FF" : "#1F1F23",
+                        color: projectIndex == 0 ? "#1F1F23" : "#CDA1FF",
+                        backgroundColor: projectIndex == 0 ? "#CDA1FF" : "#1F1F23",
                         fontFamily: "Inter Variable"
                     }} onClick={() => changeCategory(0)}>
                         Barefoot Suite
                     </button>
                     <button style={{
-                        color: category == 1 ? "#1F1F23" : "#CDA1FF",
-                        backgroundColor: category == 1 ? "#CDA1FF" : "#1F1F23",
+                        color: projectIndex == 1 ? "#1F1F23" : "#CDA1FF",
+                        backgroundColor: projectIndex == 1 ? "#CDA1FF" : "#1F1F23",
                         fontFamily: "Inter Variable"
                     }} onClick={() => changeCategory(1)}>
                         Hakulele
                     </button>
+                    <button style={{
+                        color: projectIndex == 2 ? "#1F1F23" : "#CDA1FF",
+                        backgroundColor: projectIndex == 2 ? "#CDA1FF" : "#1F1F23",
+                        fontFamily: "Inter Variable"
+                    }} onClick={() => changeCategory(2)}>
+                        alessandrocei.it
+                    </button>
                 </nav>
                 <div style={{marginTop: "10px"}} className="single-project">
-                    {category == 0 ? <BarefootCollege/> : <Hakulele/>}
+                    {projects[projectIndex ?? 0]}
                     <div className="single-project-visuals">
-                        <SkillsGrid skills={
-                            category == 0 ? ["UIKit", "VoiceOver", "iOS", "iPadOS", "SwiftUI", 
-                                            "On Site Usability Testing", "Accessibility", 
-                                            "FileMaker", "APIs", "Completion Handlers", "Async/Await", "CoreData", 
-                                            "Animations"] 
-                                            :
-                                            ["SwiftUI", "App Store Connect", "TestFlight", "JSONDecoder",
-                                             "iPadOS", "AVFoundation", "AudioKit", "Haptic Feedback", "iOS", "HIG",
-                                              "On Site Usability Testing", "Animations"]
-                        }/>
+                        <SkillsGrid skills={skills[projectIndex ?? 0]}/>
                         <div className="single-project-images">
                             {loadedPictures == true ?
                                 <img 
-                                src={pictures[category ?? 0][pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
+                                src={pictures[projectIndex ?? 0][pictureIndex]} alt={`Image ${pictureIndex + 1}`} 
                                 style={{
                                     ...picturesStyles[pictureIndex],
                                     opacity: pictureIndex === pictureIndex ? (fadeOut ? 0 : 1) : 0,
