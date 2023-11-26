@@ -1,5 +1,5 @@
 import "./Hero.css";
-import OneLiner from "./components/OneLiner/OneLiner";
+import OneLiner from "./subcomponents/OneLiner/OneLiner";
 import hero from "../../assets/hero.webp";
 import chevron from "../../assets/chevron.svg";
 import { Link } from "react-scroll";

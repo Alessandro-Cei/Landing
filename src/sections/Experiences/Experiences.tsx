@@ -3,9 +3,9 @@ import symbol from "../../assets/experiences.svg"
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { ReactElement, useState } from "react";
 import pdf from "../../../public/Cei Alessandro CV ENG.pdf"
-import Education from "./components/Education";
-import AdaStudent from "./components/AdaStudent";
-import Pier from "./components/Pier";
+import Education from "./subcomponents/Education";
+import AdaStudent from "./subcomponents/AdaStudent";
+import Pier from "./subcomponents/Pier";
 
 const experiences:ReactElement[] = [<Education/>, <AdaStudent/>, <Pier/>];
 

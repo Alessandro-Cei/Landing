@@ -4,7 +4,7 @@ import symbol from "../../assets/contacts.svg";
 import baloon1 from "../../assets/baloon1.svg";
 import baloon2 from "../../assets/baloon2.svg";
 import doodle from "../../assets/doodle.svg";
-import ContactForm from "./components/ContactForm";
+import ContactForm from "./subcomponents/ContactForm";
 
 export default function Contacts() {
 

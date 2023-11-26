@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './PillsGrid.css';
-import PillsRow from './components/PillsRow';
+import PillsRow from './subcomponents/PillsRow';
 
 export default function PillsGrid() {
     

@@ -1,10 +1,10 @@
 import "./Projects.css";
 import { useState, useEffect, useRef, ReactElement } from "react";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import SkillsGrid from "./components/SkillsGrid";
-import BarefootCollege from "./components/BarefootCollege";
-import Hakulele from "./components/Hakulele";
-import Alessandrocei from "./components/Alessandrocei";
+import SkillsGrid from "./subcomponents/SkillsGrid";
+import BarefootCollege from "./subcomponents/BarefootCollege";
+import Hakulele from "./subcomponents/Hakulele";
+import Alessandrocei from "./subcomponents/Alessandrocei";
 import symbol from "../../assets/projects.svg";
 import barefoot1 from "../../assets/barefoot1.webp";
 import barefoot2 from "../../assets/barefoot2.webp";
