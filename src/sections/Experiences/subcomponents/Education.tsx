@@ -14,7 +14,7 @@ export default function Education() {
             <br/>
             My desire of understanding our world didn’t end there: another aspect to
             learn how things works out is through <span>marketing, business</span> and projects,
-            studing current events, polishing a <span>methodological approach</span> to analize 
+            studying current events, polishing a <span>methodological approach</span> to analize 
             situations and trends...
             <br/>
             <br/>
