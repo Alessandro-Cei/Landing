@@ -105,7 +105,7 @@ export default function Projects () {
             <div className="projects__upper-side">
             <img className="projects__symbol" src={symbol} alt="Sauce section's title symbol" />
             <div>
-                <SectionTitle color='#CDA1FF' title='Projects' subtitle='Each of them is a sweet child of mine (pun intended).'/>
+                <SectionTitle color='#CDA1FF' title='Projects' subtitle='Each of them is a sweet child of mine.'/>
                 <h4  className="projects__text">
                     Every project has a <span style={{color: "#CDA1FF", fontWeight: "bold"}}>whole universe</span> behind it. 
                     <br/>

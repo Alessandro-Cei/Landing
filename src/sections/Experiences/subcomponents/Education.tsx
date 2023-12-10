@@ -3,7 +3,7 @@ export default function Education() {
         <div className="single-experience-description">
             <h4>
             I’ve always been curious of <span>understanding how people’s mind works</span>,
-            so I’ve attendend a <span>Graphic Design Course</span>. Studing the visual 
+            so I’ve attendend a <span>Graphic Design Course</span>. Studying the visual 
             perception for me was like learning <span>how we actually see the world </span> 
             around us, how we explore and get info from the environment. 
             <br/>
